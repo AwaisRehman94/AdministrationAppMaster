@@ -1,11 +1,15 @@
 
+using Microsoft.OpenApi.Models;
+
 using Common.Application;
-using Common.Application.Middlewares;
 using Common.Infrastructure;
+
+using Identity.Application.Middlewares;
+using Identity.Application;
+using Identity.Infrastructure;
 
 using Inquiry.Application;
 using Inquiry.Infrastructure;
-using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,10 +18,12 @@ var builder = WebApplication.CreateBuilder(args);
 //***************AddApplication**************//
 
 builder.Services.AddCommonApplication();
+builder.Services.AddIdentityApplication();
 builder.Services.AddInquiryApplication();
 
 //***************AddPersistence**************//
 builder.Services.AddCommonPersistence(builder.Configuration);
+builder.Services.AddIdentityPersistence(builder.Configuration);
 builder.Services.AddInquiryPersistence(builder.Configuration);
 
 builder.Services.AddControllers();

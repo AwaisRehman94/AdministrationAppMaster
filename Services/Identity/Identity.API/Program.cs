@@ -1,20 +1,23 @@
 
 using Identity.Application;
 using Identity.Infrastructure;
-
 using Identity.API;
 
-using Common.Application.Middlewares;
+using Common.Application;
+using Common.Infrastructure;
+using Identity.Application.Middlewares;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 //***************AddApplication**************//
+builder.Services.AddCommonApplication();
 builder.Services.AddIdentityApplication();
 
 
 //***************AddPersistence**************//
+builder.Services.AddCommonPersistence(builder.Configuration);
 builder.Services.AddIdentityPersistence(builder.Configuration);
 
 builder.Services.AddIdentityAPIServices();

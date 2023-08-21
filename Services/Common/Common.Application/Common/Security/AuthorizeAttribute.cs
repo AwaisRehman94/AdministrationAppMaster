@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.AspNetCore.Mvc;
 
 using Microsoft.AspNetCore.Http;
+using Common.Domain.Models;
 
 namespace Common.Application.Common.Security
 {
@@ -17,7 +18,7 @@ namespace Common.Application.Common.Security
                 return;
 
             // authorization
-            var user = (IDictionary<string, string>?)context.HttpContext.Items["User"];
+            var user = (GetAuthorizedUserByIdResponse?)context.HttpContext.Items["User"];
             if (user == null)
             {
                 // not logged in or role not authorized

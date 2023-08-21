@@ -9,8 +9,7 @@ using Identity.Application.Common.Interfaces;
 using Identity.Application.Services;
 using Identity.Application.Common.Behaviours;
 using Common.Application.Common.Interfaces;
-using Common.Infrastructure.Services;
-
+using Common.Application.Services;
 namespace Identity.Application
 {
     public static class DI

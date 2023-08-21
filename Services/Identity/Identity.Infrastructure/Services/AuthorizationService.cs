@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Identity;
 using Identity.Application.Common.Interfaces;
 using Identity.Application.Common.Models;
 using Identity.Infrastructure.Persistence.Entities;
+using Common.Domain.Models;
 
 namespace Identity.Infrastructure.Services
 {
@@ -28,9 +29,9 @@ namespace Identity.Infrastructure.Services
             return um;
         }
 
-        public async Task<IDictionary<string, string>> GetUserByIdAsync(string id)
+        public async Task<GetAuthorizedUserByIdResponse> GetUserByIdAsync(string id)
         {
-            // GetAuthorizedUserByIdResponse getAuthorizedUserByIdResponse = new GetAuthorizedUserByIdResponse();
+            GetAuthorizedUserByIdResponse getAuthorizedUserByIdResponse = new GetAuthorizedUserByIdResponse();
 
             Dictionary<string, string> keyValuePairs = new Dictionary<string, string>();
             var result = await _userManager.FindByIdAsync(id);
@@ -38,9 +39,9 @@ namespace Identity.Infrastructure.Services
             if (result == null)
                 return null;
 
-            keyValuePairs.Add("Email", result.Email!);
-            keyValuePairs.Add("Id", result.Id);
-            return keyValuePairs;
+            getAuthorizedUserByIdResponse.Email = result.Email;
+            getAuthorizedUserByIdResponse.Id = result.Id;
+            return getAuthorizedUserByIdResponse;
         }
     }
 }
