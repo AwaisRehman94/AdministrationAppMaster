@@ -21,12 +21,8 @@ namespace Identity.Application.Middlewares
             var userId = tokenService.ValidateToken(token);
             if (userId != null)
             {
-                //Dictionary<string,string> keyValuePairs = new Dictionary<string,string>();
-                //keyValuePairs.Add("current_user_id", userId);
-                //context.Items["User"] = keyValuePairs;
-
                 // attach user to context on successful jwt validation
-                  context.Items["User"] = await _authorizationService.GetUserByIdAsync(userId);
+                context.Items["User"] = await _authorizationService.GetUserByIdAsync(userId);
 
             }
             else

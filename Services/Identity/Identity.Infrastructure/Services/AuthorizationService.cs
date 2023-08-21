@@ -32,15 +32,15 @@ namespace Identity.Infrastructure.Services
         public async Task<GetAuthorizedUserByIdResponse> GetUserByIdAsync(string id)
         {
             GetAuthorizedUserByIdResponse getAuthorizedUserByIdResponse = new GetAuthorizedUserByIdResponse();
-
-            Dictionary<string, string> keyValuePairs = new Dictionary<string, string>();
+            
             var result = await _userManager.FindByIdAsync(id);
 
             if (result == null)
                 return null;
 
-            getAuthorizedUserByIdResponse.Email = result.Email;
+            getAuthorizedUserByIdResponse.Email = result.Email!;
             getAuthorizedUserByIdResponse.Id = result.Id;
+            
             return getAuthorizedUserByIdResponse;
         }
     }

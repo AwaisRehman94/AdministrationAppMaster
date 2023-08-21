@@ -1,10 +1,9 @@
 
-using Common.Application.Common.Security;
+using Microsoft.AspNetCore.Mvc;
 
-using Identity.Application.Common.Exceptions;
+using Common.Application.Common.Security;
 using Identity.Application.Common.Models;
 using Identity.Application.Features.Authorization.Queries;
-using Microsoft.AspNetCore.Mvc;
 
 namespace Identity.API.Controllers
 {

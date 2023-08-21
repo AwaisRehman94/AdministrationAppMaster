@@ -5,9 +5,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
+using Identity.Application.Common.Interfaces;
 using Identity.Infrastructure.Persistence;
 using Identity.Infrastructure.Services;
-using Identity.Application.Common.Interfaces;
 using Identity.Infrastructure.Repositories;
 using Identity.Infrastructure.Persistence.Entities;
 
@@ -32,8 +32,7 @@ namespace Identity.Infrastructure
             
             services.AddTransient(typeof(IRepository<>), typeof(RepositoryBase<>));
             services.AddTransient<IAuthorizationService, AuthorizationService>();
-            // services.AddTransient<ITokenService, TokenService>();
-
+ 
             services.AddCors();
             services.AddAuthentication();// .AddIdentityServerJwt();
             services.AddAuthorization();

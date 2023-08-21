@@ -24,7 +24,6 @@ builder.Services.AddInquiryApplication();
 //***************AddPersistence**************//
 builder.Services.AddCommonPersistence(builder.Configuration);
 builder.Services.AddIdentityPersistence(builder.Configuration);
-builder.Services.AddInquiryPersistence(builder.Configuration);
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
