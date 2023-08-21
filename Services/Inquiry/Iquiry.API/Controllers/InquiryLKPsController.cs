@@ -1,5 +1,6 @@
 
 using Common.Application.Common.Models;
+using Common.Application.Common.Security;
 using Inquiry.Application.Features.Lookups.Queries.GetBenefits;
 using Inquiry.Application.Features.Lookups.Queries.GetDeductibles;
 
@@ -23,6 +24,7 @@ namespace Tameenk.Autoleasing.InquiryAPI.Controllers
             return await Mediator.Send(new GetBenefitsRequest() { Language = language });
         }
 
+        [Authorize]
         [HttpGet(Name = "GetDeductibles")]
         public async Task<ActionResult<Result<List<GetDeductiblesResponse>>>> GetDeductibles()
         {

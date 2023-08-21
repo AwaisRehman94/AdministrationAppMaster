@@ -1,5 +1,6 @@
 
-using Identity.API.Authorization;
+using Common.Application.Common.Security;
+
 using Identity.Application.Common.Exceptions;
 using Identity.Application.Common.Models;
 using Identity.Application.Features.Authorization.Queries;

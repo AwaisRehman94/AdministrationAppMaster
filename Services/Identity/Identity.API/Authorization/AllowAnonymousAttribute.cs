@@ -1,6 +1,6 @@
-﻿namespace Identity.API.Authorization
-{
-    [AttributeUsage(AttributeTargets.Method)]
-    public class AllowAnonymousAttribute : Attribute
-    { }
-}
+﻿//namespace Identity.API.Authorization
+//{
+//    [AttributeUsage(AttributeTargets.Method)]
+//    public class AllowAnonymousAttribute : Attribute
+//    { }
+//}
