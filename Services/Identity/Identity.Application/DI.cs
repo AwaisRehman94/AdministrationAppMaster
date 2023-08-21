@@ -8,6 +8,8 @@ using Identity.Application.Features.Authorization.Queries;
 using Identity.Application.Common.Interfaces;
 using Identity.Application.Services;
 using Identity.Application.Common.Behaviours;
+using Common.Application.Common.Interfaces;
+using Common.Infrastructure.Services;
 
 namespace Identity.Application
 {
@@ -27,10 +29,14 @@ namespace Identity.Application
             services.AddTransient<IAutoleasingVerifyUserService, AutoleasingVerifyUserService>();
             services.AddScoped<IValidator<LoginRequest>, LoginRequestValidator>();
 
+            services.AddTransient<ITokenService, TokenService>();
+
+
             // services.AddScoped<IDeductibleService, DeductibleService>();
             //services.AddTransient(typeof(IPipelineBehavior<,>), typeof(UnhandledExceptionBehaviour<,>));
             //services.AddTransient(typeof(IPipelineBehavior<,>), typeof(AuthorizationBehaviour<,>));
             //services.AddTransient(typeof(IPipelineBehavior<,>), typeof(PerformanceBehaviour<,>));
+
 
             return services;
         }

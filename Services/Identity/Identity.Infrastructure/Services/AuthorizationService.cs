@@ -28,17 +28,19 @@ namespace Identity.Infrastructure.Services
             return um;
         }
 
-        public async Task<GetAuthorizedUserByIdResponse> GetUserByIdAsync(string id)
+        public async Task<IDictionary<string, string>> GetUserByIdAsync(string id)
         {
-            GetAuthorizedUserByIdResponse getAuthorizedUserByIdResponse = new GetAuthorizedUserByIdResponse();
+            // GetAuthorizedUserByIdResponse getAuthorizedUserByIdResponse = new GetAuthorizedUserByIdResponse();
+
+            Dictionary<string, string> keyValuePairs = new Dictionary<string, string>();
             var result = await _userManager.FindByIdAsync(id);
-             
+
             if (result == null)
                 return null;
 
-            getAuthorizedUserByIdResponse.Email = result.Email!;
-            getAuthorizedUserByIdResponse.Id = result.Id;
-            return getAuthorizedUserByIdResponse;
+            keyValuePairs.Add("Email", result.Email!);
+            keyValuePairs.Add("Id", result.Id);
+            return keyValuePairs;
         }
     }
 }

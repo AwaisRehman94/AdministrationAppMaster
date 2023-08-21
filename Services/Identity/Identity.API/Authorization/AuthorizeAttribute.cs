@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.AspNetCore.Mvc;
 
 using Identity.Application.Common.Models;
+using Swashbuckle.AspNetCore.SwaggerGen;
 
 namespace Identity.API.Authorization
 {
@@ -17,7 +18,7 @@ namespace Identity.API.Authorization
                 return;
 
             // authorization
-            var user = (GetAuthorizedUserByIdResponse?)context.HttpContext.Items["User"];
+            var user = (IDictionary<string, string>?)context.HttpContext.Items["User"];
             if (user == null)
             {
                 // not logged in or role not authorized

@@ -6,6 +6,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Common.Application.Common.Interfaces.Persistence;
 using Common.Infrastructure.Persistence;
 using Common.Infrastructure.Repositories;
+using Common.Application.Common.Interfaces;
+using Common.Infrastructure.Services;
 
 namespace Common.Infrastructure
 {
@@ -26,6 +28,7 @@ namespace Common.Infrastructure
             }
 
             services.AddTransient(typeof(IRepository<>), typeof(EfRepository<>));
+            services.AddTransient<ITokenService, TokenService>();
         }
     }
 }

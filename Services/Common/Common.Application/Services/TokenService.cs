@@ -7,9 +7,9 @@
 //using System.Security.Claims;
 //using System.Text;
 
-//using Identity.Application.Common.Interfaces;
+//using Common.Application.Common.Interfaces;
 
-//namespace Identity.Infrastructure.Services
+//namespace Common.Application.Services
 //{
 //    public class TokenService : ITokenService
 //    {

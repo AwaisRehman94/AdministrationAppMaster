@@ -4,8 +4,10 @@ using MediatR;
 
 using Identity.Application.Common.Models;
 using Identity.Application.Common.Utilities;
-using Identity.Application.Common.Interfaces;
 using Identity.Domain.Entities;
+using Identity.Application.Common.Interfaces;
+
+using Common.Application.Common.Interfaces;
 
 namespace Identity.Application.Features.Authorization.Queries
 {
@@ -23,7 +25,7 @@ namespace Identity.Application.Features.Authorization.Queries
         private readonly IAutoleasingVerifyUserService _autoleasingVerifyUserService;
         private readonly IValidator<LoginRequest> _validator;
 
-        public LoginRequestHandler(IValidator<LoginRequest> validator, IAutoleasingVerifyUserService autoleasingVerifyUserService, IAuthorizationService authorizationService, IAutoLeasingUserService autoLeasingUserService, ITokenService tokenService)
+        public LoginRequestHandler(IValidator<LoginRequest> validator, IAutoleasingVerifyUserService autoleasingVerifyUserService, IAuthorizationService authorizationService, IAutoLeasingUserService autoLeasingUserService,  ITokenService tokenService)
         {
             _authorizationService = authorizationService;
             _autoLeasingUserService = autoLeasingUserService;

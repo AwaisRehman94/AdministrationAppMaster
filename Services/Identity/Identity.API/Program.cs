@@ -1,10 +1,10 @@
 
-using Identity.API.Filters;
 using Identity.Application;
 using Identity.Infrastructure;
-using FluentValidation.AspNetCore;
+
 using Identity.API;
-using Identity.API.Authorization;
+
+using Common.Application.Middlewares;
 
 var builder = WebApplication.CreateBuilder(args);
 
