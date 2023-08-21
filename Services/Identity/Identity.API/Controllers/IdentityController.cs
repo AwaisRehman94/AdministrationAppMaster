@@ -1,4 +1,5 @@
 
+using Identity.API.Authorization;
 using Identity.Application.Common.Exceptions;
 using Identity.Application.Common.Models;
 using Identity.Application.Features.Authorization.Queries;
@@ -17,9 +18,18 @@ namespace Identity.API.Controllers
         }
 
         [HttpPost(Name = "Login")]
+        [AllowAnonymous]
         public async Task<ActionResult<Result<LoginResponse>>> Login(LoginRequest login)
         {
             return await Mediator.Send(login);
+        }
+
+        [HttpGet(Name = "Demo")]
+        [Authorize]
+        public ActionResult<string> Demo()
+        {
+            var result = "sdfdsfsdf";
+            return result;
         }
     }
 }

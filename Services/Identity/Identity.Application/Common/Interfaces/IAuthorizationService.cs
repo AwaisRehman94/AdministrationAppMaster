@@ -7,5 +7,6 @@ namespace Identity.Application.Common.Interfaces
     public interface IAuthorizationService
     {
         Task<GetAuthorizedUserByEmailResponse> GetUserByEmailAsync(string email);
+        Task<GetAuthorizedUserByIdResponse> GetUserByIdAsync(string id);
     }
 }

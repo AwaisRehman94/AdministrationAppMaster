@@ -5,17 +5,17 @@ VisualStudioVersion = 17.7.34003.232
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{6AD5BF80-3583-421F-A358-7158709352D7}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GlobalCommon", "GlobalCommon", "{D0858042-97FE-4D5B-8F11-A382B562BABB}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{D0858042-97FE-4D5B-8F11-A382B562BABB}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Identity", "Identity", "{3B2817C7-1D0B-431B-9F42-39B6206C4DD2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Inquiry", "Inquiry", "{EEB0BE1D-478B-42AE-8B76-67A13554CA76}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GlobalCommon.Domain", "Services\GlobalCommon\GlobalCommon.Domain\GlobalCommon.Domain.csproj", "{AF69F149-4D09-4B86-BD7D-EE87213E1FC2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common.Domain", "Services\Common\Common.Domain\Common.Domain.csproj", "{AF69F149-4D09-4B86-BD7D-EE87213E1FC2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GlobalCommon.Application", "Services\GlobalCommon\GlobalCommon.Application\GlobalCommon.Application.csproj", "{B6195E62-54DB-47E6-A122-B8B8A8DA52A3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common.Application", "Services\Common\Common.Application\Common.Application.csproj", "{B6195E62-54DB-47E6-A122-B8B8A8DA52A3}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GlobalCommon.Infrastructure", "Services\GlobalCommon\GlobalCommon.Infrastructure\GlobalCommon.Infrastructure.csproj", "{437C9B0C-2690-4CA5-9919-C3D6CC4C632F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common.Infrastructure", "Services\Common\Common.Infrastructure\Common.Infrastructure.csproj", "{437C9B0C-2690-4CA5-9919-C3D6CC4C632F}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Identity.Domain", "Services\Identity\Identity.Domain\Identity.Domain.csproj", "{D82D5FAE-6B99-4AE3-A4FD-5319150B7CE0}"
 EndProject
@@ -31,7 +31,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Inquiry.Infrastructure", "S
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tameenk.Autoleasing.InquiryAPI", "Services\Inquiry\Iquiry.API\Tameenk.Autoleasing.InquiryAPI.csproj", "{E6C9A05B-EC36-4406-9610-636DDF897B10}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identity.API", "Services\Identity\Identity.API\Identity.API.csproj", "{05BCF75A-8B22-4959-BDB9-7A4D65FB4484}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Identity.API", "Services\Identity\Identity.API\Identity.API.csproj", "{05BCF75A-8B22-4959-BDB9-7A4D65FB4484}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

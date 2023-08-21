@@ -1,5 +1,5 @@
 
-using GlobalCommon.Application.Common.Models;
+using Common.Application.Common.Models;
 using Inquiry.Application.Features.Lookups.Queries.GetBenefits;
 using Inquiry.Application.Features.Lookups.Queries.GetDeductibles;
 

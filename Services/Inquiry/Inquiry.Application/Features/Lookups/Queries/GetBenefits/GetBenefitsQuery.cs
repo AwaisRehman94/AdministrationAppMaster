@@ -3,7 +3,7 @@ using AutoMapper;
 using MediatR;
 
 using Inquiry.Application.Common.Interfaces;
-using GlobalCommon.Application.Common.Models;
+using Common.Application.Common.Models;
 
 namespace Inquiry.Application.Features.Lookups.Queries.GetBenefits
 {

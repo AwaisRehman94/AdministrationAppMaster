@@ -1,5 +1,5 @@
 ﻿
-using GlobalCommon.Domain.Enums;
+using Common.Domain.Enums;
 
 namespace Inquiry.Application.Common.Models
 {

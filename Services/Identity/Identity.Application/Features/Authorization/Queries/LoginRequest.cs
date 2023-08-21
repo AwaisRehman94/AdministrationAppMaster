@@ -17,17 +17,19 @@ namespace Identity.Application.Features.Authorization.Queries
 
     public class LoginRequestHandler : IRequestHandler<LoginRequest, Result<LoginResponse>>
     {
+        private readonly ITokenService _tokenService;
         private readonly IAuthorizationService _authorizationService;
         private readonly IAutoLeasingUserService _autoLeasingUserService;
         private readonly IAutoleasingVerifyUserService _autoleasingVerifyUserService;
         private readonly IValidator<LoginRequest> _validator;
 
-        public LoginRequestHandler(IValidator<LoginRequest> validator, IAutoleasingVerifyUserService autoleasingVerifyUserService, IAuthorizationService authorizationService, IAutoLeasingUserService autoLeasingUserService)
+        public LoginRequestHandler(IValidator<LoginRequest> validator, IAutoleasingVerifyUserService autoleasingVerifyUserService, IAuthorizationService authorizationService, IAutoLeasingUserService autoLeasingUserService, ITokenService tokenService)
         {
             _authorizationService = authorizationService;
             _autoLeasingUserService = autoLeasingUserService;
             _autoleasingVerifyUserService = autoleasingVerifyUserService;
             _validator = validator;
+            _tokenService = tokenService;
         }
 
         public async Task<Result<LoginResponse>> Handle(LoginRequest request, CancellationToken cancellationToken)
@@ -87,10 +89,10 @@ namespace Identity.Application.Features.Authorization.Queries
 
 
             //TODO send SMS by configured Provider
-
+            var token = _tokenService.GenerateToken(authrizedUser.Id);
             result.ErrorDescription = "success";
             result.ErrorCode = 1;
-            result.Data = new LoginResponse() { VerificationCode = verifyData.VerificationCode };
+            result.Data = new LoginResponse() { VerificationCode = verifyData.VerificationCode, Token = token };
             return result;
         }
 

@@ -2,9 +2,9 @@
 using AutoMapper;
 using AutoMapper.QueryableExtensions;
 
-using GlobalCommon.Application.Common.Interfaces.Persistence;
-using GlobalCommon.Application.Common.Mappings;
-using GlobalCommon.Domain.Entities;
+using Common.Application.Common.Interfaces.Persistence;
+using Common.Application.Common.Mappings;
+using Common.Domain.Entities;
 
 using Inquiry.Application.Common.Interfaces;
 using Inquiry.Application.Features.Lookups.Queries.GetBenefits;

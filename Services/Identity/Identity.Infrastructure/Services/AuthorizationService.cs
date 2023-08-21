@@ -5,7 +5,6 @@ using Identity.Application.Common.Interfaces;
 using Identity.Application.Common.Models;
 using Identity.Infrastructure.Persistence.Entities;
 
-
 namespace Identity.Infrastructure.Services
 {
     public class AuthorizationService : IAuthorizationService
@@ -27,6 +26,19 @@ namespace Identity.Infrastructure.Services
             um.Email = result.Email;
             um.Id = result.Id;
             return um;
+        }
+
+        public async Task<GetAuthorizedUserByIdResponse> GetUserByIdAsync(string id)
+        {
+            GetAuthorizedUserByIdResponse getAuthorizedUserByIdResponse = new GetAuthorizedUserByIdResponse();
+            var result = await _userManager.FindByIdAsync(id);
+             
+            if (result == null)
+                return null;
+
+            getAuthorizedUserByIdResponse.Email = result.Email!;
+            getAuthorizedUserByIdResponse.Id = result.Id;
+            return getAuthorizedUserByIdResponse;
         }
     }
 }

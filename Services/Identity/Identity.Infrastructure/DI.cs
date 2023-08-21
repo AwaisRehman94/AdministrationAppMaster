@@ -32,8 +32,10 @@ namespace Identity.Infrastructure
             
             services.AddTransient(typeof(IRepository<>), typeof(RepositoryBase<>));
             services.AddTransient<IAuthorizationService, AuthorizationService>();
-            services.AddAuthentication();// .AddIdentityServerJwt();
+            services.AddTransient<ITokenService, TokenService>();
 
+            services.AddCors();
+            services.AddAuthentication();// .AddIdentityServerJwt();
             services.AddAuthorization();
         }
     }

@@ -4,6 +4,7 @@ using Identity.Application;
 using Identity.Infrastructure;
 using FluentValidation.AspNetCore;
 using Identity.API;
+using Identity.API.Authorization;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -31,6 +32,14 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+// global cors policy
+app.UseCors(x => x
+    .AllowAnyOrigin()
+    .AllowAnyMethod()
+    .AllowAnyHeader());
+
+// custom jwt auth middleware
+app.UseMiddleware<JwtMiddleware>();
 app.UseHttpsRedirection();
 
 // app.UseAuthentication();

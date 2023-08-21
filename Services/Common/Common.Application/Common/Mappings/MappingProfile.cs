@@ -2,24 +2,13 @@
 
 using AutoMapper;
 
-using Common.Domain.Entities;
-
-using Inquiry.Application.Features.Lookups.Queries.GetBenefits;
-using Inquiry.Application.Features.Lookups.Queries.GetDeductibles;
-
-namespace Inquiry.Application.Mappings
+namespace Common.Application.Common.Mappings
 {
     public class MappingProfile : Profile
     {
         public MappingProfile()
         {
-            CreateMap<AutoleasingBenefit, GetBenefitResponse>();
-            CreateMap<GetBenefitResponse, GetBenefitResponse>();
-            
-            CreateMap<GetDeductiblesResponse, GetDeductiblesResponse>();
-            
             ApplyMappingsFromAssembly(Assembly.GetExecutingAssembly());
-            
         }
 
         private void ApplyMappingsFromAssembly(Assembly assembly)

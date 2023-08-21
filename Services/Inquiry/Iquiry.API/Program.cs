@@ -1,6 +1,6 @@
 
-using GlobalCommon.Application;
-using GlobalCommon.Infrastructure;
+using Common.Application;
+using Common.Infrastructure;
 
 using Inquiry.Application;
 using Inquiry.Infrastructure;
@@ -11,11 +11,11 @@ var builder = WebApplication.CreateBuilder(args);
 
 //***************AddApplication**************//
 
-builder.Services.AddGlobalCommonApplication();
+builder.Services.AddCommonApplication();
 builder.Services.AddInquiryApplication();
 
 //***************AddPersistence**************//
-builder.Services.AddGlobalCommonPersistence(builder.Configuration);
+builder.Services.AddCommonPersistence(builder.Configuration);
 builder.Services.AddInquiryPersistence(builder.Configuration);
 
 builder.Services.AddControllers();

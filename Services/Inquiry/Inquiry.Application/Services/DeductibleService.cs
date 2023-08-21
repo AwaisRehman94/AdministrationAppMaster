@@ -5,9 +5,9 @@ using AutoMapper.QueryableExtensions;
 using Inquiry.Application.Common.Interfaces;
 using Inquiry.Application.Features.Lookups.Queries.GetDeductibles;
 
-using GlobalCommon.Application.Common.Interfaces.Persistence;
-using GlobalCommon.Application.Common.Mappings;
-using GlobalCommon.Domain.Entities;
+using Common.Application.Common.Interfaces.Persistence;
+using Common.Application.Common.Mappings;
+using Common.Domain.Entities;
 
 namespace Inquiry.Application.Services
 {
