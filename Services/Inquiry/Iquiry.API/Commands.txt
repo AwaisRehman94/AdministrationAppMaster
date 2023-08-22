@@ -1,3 +1,4 @@
 ﻿
 //Ef Core Command to generate Db DbModel
-Scaffold-DbContext "Server=192.168.1.32\MOTOR;Database=AutoLeasingService;Password=J@2Ir@h-DB03;User Id=bcareTest;TrustServerCertificate=True;MultipleActiveResultSets=true" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Persistence\Models
+Scaffold-DbContext "Server=192.168.1.32\MOTOR;Database=AutoLeasingService;Password=J@2Ir@h-DB03;User Id=bcareTest;TrustServerCertificate=True;MultipleActiveResultSets=true" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Persistence\AutoLeaseModels
+Scaffold-DbContext "Server=192.168.1.32\MOTOR;Database=AutoLeasingServiceLog;Password=J@2Ir@h-DB03;User Id=bcareTest;TrustServerCertificate=True;MultipleActiveResultSets=true" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Persistence\AutoLeaseLogModels

@@ -25,7 +25,7 @@ namespace Common.Infrastructure
             {
                 throw new Exception("Persistence init Exception");
             }
-            services.AddTransient(typeof(IRepository<>), typeof(EfRepository<>));
+            services.AddTransient(typeof(IRepository<>), typeof(CommonRepositoryBase<>));
         }
     }
 }

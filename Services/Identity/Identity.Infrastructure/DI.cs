@@ -10,7 +10,7 @@ using Identity.Infrastructure.Persistence;
 using Identity.Infrastructure.Services;
 using Identity.Infrastructure.Repositories;
 using Identity.Infrastructure.Persistence.Entities;
-
+ 
 namespace Identity.Infrastructure
 {
     public static class DI
@@ -19,18 +19,18 @@ namespace Identity.Infrastructure
         {
             if (configuration.GetSection("DbProvider").Value == "MSSQLServer")
             {
-                services.AddDbContext<ApplicationDbContext>(
+                services.AddDbContext<IdentityDbContext>(
                     options =>
                     options.UseSqlServer(configuration.GetConnectionString("MSSQLServer_DefaultConnection"),
-                    builder => builder.MigrationsAssembly(typeof(ApplicationDbContext).Assembly.FullName)));
+                    builder => builder.MigrationsAssembly(typeof(IdentityDbContext).Assembly.FullName)));
             }
             else
             {
                 throw new Exception("Persistence init Exception");
             }
-            services.AddDefaultIdentity<AspNetUser>().AddRoles<IdentityRole>().AddEntityFrameworkStores<ApplicationDbContext>();
+            services.AddDefaultIdentity<AspNetUser>().AddRoles<IdentityRole>().AddEntityFrameworkStores<IdentityDbContext>();
             
-            services.AddTransient(typeof(IRepository<>), typeof(RepositoryBase<>));
+            services.AddTransient(typeof(IRepository<>), typeof(IdentityRepositoryBase<>));
             services.AddTransient<IAuthorizationService, AuthorizationService>();
  
             services.AddCors();

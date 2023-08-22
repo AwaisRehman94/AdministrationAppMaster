@@ -54,7 +54,7 @@ namespace Identity.Application.Features.Authorization.Queries
                 return result;
             }
 
-            var autoLeasingUser = await _autoLeasingUserService.GetUserByEmailAsync(authrizedUser.Email);
+            var autoLeasingUser = await _autoLeasingUserService.GetUserByEmailAsync(authrizedUser.Email!);
 
             if (autoLeasingUser == null)
             {

@@ -7,6 +7,7 @@ using Identity.Application.Common.Interfaces;
 using Identity.Application.Common.Models;
 using Identity.Domain.Entities;
 
+
 namespace Identity.Application.Services
 {
     internal class AutoLeasingUserService : IAutoLeasingUserService

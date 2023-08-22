@@ -25,4 +25,9 @@
     <ProjectReference Include="..\Inquiry.Infrastructure\Inquiry.Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Persistence\AutoLeaseLogModels\" />
+    <Folder Include="Persistence\AutoLeaseModels\" />
+  </ItemGroup>
+
 </Project>

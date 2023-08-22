@@ -14,6 +14,7 @@ namespace Common.Application.Services
     public class TokenService : ITokenService
     {
         private readonly IConfiguration _configuration;
+        // private readonly CommonRepositoryBase
 
         public TokenService(IConfiguration configuration)
         {
