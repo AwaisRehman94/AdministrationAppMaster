@@ -32,8 +32,17 @@ namespace Common.Application.Services
             var key = Encoding.ASCII.GetBytes(_configuration.GetSection("JWT:SecretKey").Value!);
             var tokenDescriptor = new SecurityTokenDescriptor
             {
-                Subject = new ClaimsIdentity(new[] { new Claim("current_user_id", userId) }),
+                // Subject = new ClaimsIdentity(new[] { new Claim("current_user_id", userId) }),
+                Subject = new ClaimsIdentity(new Claim[]
+                {
+                    //TODO IP Address
+                    new Claim("IpAddress", "127.0.0.1"),
+                    new Claim("current_user_id", userId),
+                    new Claim(ClaimTypes.Name, "Anonymous"),
+                    // new Claim(ClaimTypes.Role, "Admin")
+                }),
                 Expires = DateTime.UtcNow.AddDays(7),
+
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
             };
             var token = tokenHandler.CreateToken(tokenDescriptor);

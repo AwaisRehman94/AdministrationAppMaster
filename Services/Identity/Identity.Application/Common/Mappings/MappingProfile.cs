@@ -2,7 +2,7 @@
 using AutoMapper;
 using Identity.Domain.Entities;
 using System.Reflection;
-
+using Common.Domain.Models;
 
 namespace Identity.Application.Common.Mappings
 {
@@ -11,6 +11,7 @@ namespace Identity.Application.Common.Mappings
         public MappingProfile()
         {
             CreateMap<AutoleasingUser, GetAutoLeasingUserByEmailResponse>();
+            CreateMap<GetAuthorizedUserByIdResponse, UserModel>();
             ApplyMappingsFromAssembly(Assembly.GetExecutingAssembly());
 
         }
