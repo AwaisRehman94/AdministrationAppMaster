@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Tameenk.Autoleasing.InquiryAPI.Persistence.Identity;
+namespace Inquiry.API.Persistence.Identity;
 
 public partial class AspNetUser : IdentityUser
 {

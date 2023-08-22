@@ -6,7 +6,7 @@ using Inquiry.Application.Features.Lookups.Queries.GetDeductibles;
 
 using Microsoft.AspNetCore.Mvc;
 
-namespace Tameenk.Autoleasing.InquiryAPI.Controllers
+namespace Inquiry.API.Controllers
 {
     [ApiController]
     [Route("[action]")]

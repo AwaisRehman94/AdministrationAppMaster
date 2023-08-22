@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Tameenk.Autoleasing.InquiryAPI.Persistence.Identity;
+namespace Inquiry.API.Persistence.Identity;
 
 public partial class AspNetRoleClaim
 {

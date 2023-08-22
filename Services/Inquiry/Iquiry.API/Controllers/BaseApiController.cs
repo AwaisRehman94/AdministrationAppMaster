@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Hosting.Server;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Tameenk.Autoleasing.InquiryAPI.Controllers
+namespace Inquiry.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

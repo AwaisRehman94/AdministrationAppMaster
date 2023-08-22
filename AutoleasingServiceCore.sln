@@ -29,7 +29,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Inquiry.Application", "Serv
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Inquiry.Infrastructure", "Services\Inquiry\Inquiry.Infrastructure\Inquiry.Infrastructure.csproj", "{093705B9-D3AF-4F84-99A0-69D5640AA052}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tameenk.Autoleasing.InquiryAPI", "Services\Inquiry\Iquiry.API\Tameenk.Autoleasing.InquiryAPI.csproj", "{E6C9A05B-EC36-4406-9610-636DDF897B10}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Inquiry.API", "Services\Inquiry\Iquiry.API\Inquiry.API.csproj", "{E6C9A05B-EC36-4406-9610-636DDF897B10}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Identity.API", "Services\Identity\Identity.API\Identity.API.csproj", "{05BCF75A-8B22-4959-BDB9-7A4D65FB4484}"
 EndProject
