@@ -1,13 +1,14 @@
 ﻿
-using Identity.Domain.Entities;
+using Common.Domain.Entities;
 using Identity.Application.Common.Interfaces;
+ 
 using Identity.Infrastructure.Persistence;
 
 using Microsoft.EntityFrameworkCore;
-
+ 
 namespace Identity.Infrastructure.Repositories
 {
-    public class IdentityRepositoryBase<T> : IRepository<T> where T : BaseEntity
+    public class IdentityRepositoryBase<T> : IRepository<T> where T : class
     {
         protected readonly IdentityDbContext _applicationDbContext;
         public IdentityRepositoryBase(IdentityDbContext context)

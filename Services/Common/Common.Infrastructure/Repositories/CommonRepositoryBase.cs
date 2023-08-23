@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Common.Infrastructure.Repositories
 {
-    public class CommonRepositoryBase<T> : IRepository<T> where T : BaseEntity
+    public class CommonRepositoryBase<T> : IRepository<T> where T : class
     {
         protected readonly CommonDbContext _commonDbContext;
         public CommonRepositoryBase(CommonDbContext context)

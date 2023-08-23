@@ -4,8 +4,7 @@ using Microsoft.AspNetCore.Identity;
 using Identity.Application.Common.Interfaces;
 using Identity.Application.Common.Models;
 using Identity.Infrastructure.Persistence.Entities;
-using Common.Domain.Models;
-
+ 
 namespace Identity.Infrastructure.Services
 {
     public class AuthorizationService : IAuthorizationService

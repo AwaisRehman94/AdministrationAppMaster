@@ -2,12 +2,14 @@
 using FluentValidation;
 using MediatR;
 
-using Identity.Application.Common.Models;
+
 using Identity.Application.Common.Utilities;
 using Identity.Domain.Entities;
 using Identity.Application.Common.Interfaces;
 
 using Common.Application.Common.Interfaces;
+using Common.Domain.Common.Models;
+using Common.Domain.Models;
 
 namespace Identity.Application.Features.Authorization.Queries
 {

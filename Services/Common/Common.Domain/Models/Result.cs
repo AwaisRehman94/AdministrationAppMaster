@@ -1,5 +1,5 @@
 ﻿
-namespace Identity.Application.Common.Models
+namespace Common.Domain.Common.Models
 {
     public class Result<T> where T : class
     {

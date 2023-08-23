@@ -1,7 +1,6 @@
-﻿
-using Identity.Domain.Enums;
+﻿using Common.Domain.Enums;
 
-namespace Identity.Application.Common.Models
+namespace Common.Domain.Models
 {
     public class BaseViewModel
     {

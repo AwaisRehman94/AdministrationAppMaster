@@ -3,7 +3,7 @@
 using AutoMapper;
 using AutoMapper.QueryableExtensions;
 
-using Common.Application.Common.Models;
+using Common.Domain.Common.Models;
 
 namespace Common.Application.Common.Mappings
 {

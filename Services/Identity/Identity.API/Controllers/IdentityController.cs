@@ -1,8 +1,10 @@
 
 using Microsoft.AspNetCore.Mvc;
 
+
+using Common.Domain.Common.Models;
 using Common.Application.Common.Security;
-using Identity.Application.Common.Models;
+
 using Identity.Application.Features.Authorization.Queries;
 
 namespace Identity.API.Controllers
