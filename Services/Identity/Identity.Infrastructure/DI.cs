@@ -21,7 +21,7 @@ namespace Identity.Infrastructure
             {
                 services.AddDbContext<IdentityDbContext>(
                     options =>
-                    options.UseSqlServer(configuration.GetConnectionString("MSSQLServer_DefaultConnection"),
+                    options.UseSqlServer(configuration.GetConnectionString("MSSQLServer_AutoLeasingService"),
                     builder => builder.MigrationsAssembly(typeof(IdentityDbContext).Assembly.FullName)));
             }
             else

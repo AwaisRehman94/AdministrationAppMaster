@@ -1,0 +1,419 @@
+﻿{
+   "CodeGenerationMode": 3,
+   "ContextClassName": "AutoLeasingServiceLogContext",
+   "ContextNamespace": null,
+   "DefaultDacpacSchema": null,
+   "FilterSchemas": false,
+   "IncludeConnectionString": false,
+   "ModelNamespace": null,
+   "OutputContextPath": null,
+   "OutputPath": "Entities\\LogEntities\\",
+   "PreserveCasingWithRegex": true,
+   "ProjectRootNamespace": "Common.Domain",
+   "Schemas": null,
+   "SelectedHandlebarsLanguage": 0,
+   "SelectedToBeGenerated": 0,
+   "T4TemplatePath": null,
+   "Tables": [
+      {
+         "Name": "[dbo].[ACIGPolicyServiceRequestLogs]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ACIGQuotationServiceRequestLogs]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[AddressRequestLogs]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[AdminRequestLog]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[AhliaPolicyServiceRequestLogs]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[AhliaQuotationServiceRequestLogs]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[AICCPolicyServiceRequestLogs]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[AICCQuotationServiceRequestLogs]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[AlalamiyaPolicyServiceRequestLogs]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[AlalamiyaQuotationServiceRequestLogs]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[AllianzPolicyServiceRequestLogs]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[AllianzQuotationServiceRequestLogs]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[AlRajhiPolicyServiceRequestLogs]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[AlRajhiQuotationServiceRequestLogs]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[AmanaPolicyServiceRequestLogs]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[AmanaQuotationServiceRequestLogs]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ApplepayErrorLogs]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ArabianShieldPolicyServiceRequestLogs]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ArabianShieldQuotationServiceRequestLogs]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[AutoleasingAdminRequestLog]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[AXAPolicyServiceRequestLogs]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[AXAQuotationServiceRequestLogs]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[BCarePolicyServiceRequestLogs]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[BCareQuotationServiceRequestLogs]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[BurujPolicyServiceRequestLogs]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[BurujQuotationServiceRequestLogs]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[CancellationServiceRequestLog]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[CheckoutRequestLog]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[CompetitionRequestLogs]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[EmailLog]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[FirebaseNotificationLog]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ForbiddenRequestLogs]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[GGIPolicyServiceRequestLogs]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[GGIQuotationServiceRequestLog]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[GulfUnionPolicyServiceRequestLogs]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[GulfUnionQuotationServiceRequestLogs]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[IdentityRequestLog]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[InquiryRequestLog]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[IntegrationTransaction]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[IVRServicesLogs]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[LeasingAddBenefitLog]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[LeasingAddDriverLog]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[LeasingPortalLog]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Log]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[LoginRequestsLog]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[MalathPolicyServiceRequestLogs]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[MalathQuotationServiceRequestLogs]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[MedGulfPolicyServiceRequestLogs]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[MedGulfQuotationServiceRequestLogs]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[NajmServiceRequestLogs]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[NotificationLog]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[NotPurchasedQuotations]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[OwnDamageSMSLog]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[PaymentServiceRequestLogs]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[PdfGenerationLog]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[PolicyModificationLog]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[PolicyNotificationLogs]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[PolicyRequestLog]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[PowerBIServicesLog]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ProfileRequestsLog]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[PromotionRequestLog]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[QuotationRequestLog]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[RegistrationRequestsLog]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[SAICOPolicyServiceRequestLogs]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[SAICOQuotationServiceRequestLogs]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[SalamaPolicyServiceRequestLogs]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[SalamaQuotationServiceRequestLogs]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[SaqrPolicyServiceRequestLogs]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[SaqrQuotationServiceRequestLogs]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[SaudiPostServiceRequestLogs]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ServiceRequestLog]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[SMSLog]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[SMSNotification]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[SMSNotification_old]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[SMSNotificationTemp]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[SolidarityPolicyServiceRequestLogs]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[SolidarityQuotationServiceRequestLogs]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[TawuniyaPolicyServiceRequestLogs]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[TawuniyaQuotationServiceRequestLogs]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[TokioMarinePolicyServiceRequestLogs]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[TokioMarineQuotationServiceRequestLogs]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[TUICPolicyServiceRequestLogs]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[TUICQuotationServiceRequestLogs]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[UCAPolicyServiceRequestLogs]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[UCAQuotationServiceRequestLogs]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[UserTicketLog]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[WafaPolicyServiceRequestLogs]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[WafaQuotationServiceRequestLogs]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[WalaaPolicies]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[WalaPolicyServiceRequestLogs]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[WalaQuotationServiceRequestLogs]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[WataniyaPolicyServiceRequestLogs]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[WataniyaQuotationServiceRequestLogs]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[WhatsAppLog]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[YakeenServiceRequestLogs]",
+         "ObjectType": 0
+      }
+   ],
+   "UiHint": "win-f4a9h1e4344\\motor.AutoLeasingServiceLog.dbo",
+   "UncountableWords": null,
+   "UseBoolPropertiesWithoutDefaultSql": false,
+   "UseDatabaseNames": false,
+   "UseDateOnlyTimeOnly": false,
+   "UseDbContextSplitting": false,
+   "UseFluentApiOnly": true,
+   "UseHandleBars": false,
+   "UseHierarchyId": false,
+   "UseInflector": false,
+   "UseLegacyPluralizer": false,
+   "UseManyToManyEntity": false,
+   "UseNoDefaultConstructor": false,
+   "UseNoObjectFilter": false,
+   "UseNodaTime": false,
+   "UseNullableReferences": false,
+   "UseSchemaFolders": false,
+   "UseSchemaNamespaces": false,
+   "UseSpatial": false,
+   "UseT4": false
+}

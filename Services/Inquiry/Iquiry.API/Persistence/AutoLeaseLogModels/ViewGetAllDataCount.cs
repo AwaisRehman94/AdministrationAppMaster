@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Inquiry.API.Persistence.AutoLeaseLogModels;
-
-public partial class ViewGetAllDataCount
+namespace Inquiry.API.Persistence.AutoLeaseLogModels.Persistence.AutoLeaseLogModels
 {
-    public int Id { get; set; }
+    public partial class ViewGetAllDataCount
+    {
+        public int Id { get; set; }
+    }
 }

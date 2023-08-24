@@ -2,14 +2,17 @@
 using FluentValidation;
 using MediatR;
 
-
 using Identity.Application.Common.Utilities;
 using Identity.Domain.Entities;
 using Identity.Application.Common.Interfaces;
 
-using Common.Application.Common.Interfaces;
-using Common.Domain.Common.Models;
 using Common.Domain.Models;
+using Common.Domain.Common.Models;
+using Common.Domain.Entities.LogEntities;
+
+using Common.Application.Common.Interfaces;
+using Common.Application.Common.Interfaces.Persistence.Logs;
+using Common.Domain.Enums;
 
 namespace Identity.Application.Features.Authorization.Queries
 {
@@ -21,14 +24,16 @@ namespace Identity.Application.Features.Authorization.Queries
 
     public class LoginRequestHandler : IRequestHandler<LoginRequest, Result<LoginResponse>>
     {
+        private readonly ILoginRequestsLogService _loginRequestsLogService;
         private readonly ITokenService _tokenService;
         private readonly IAuthorizationService _authorizationService;
         private readonly IAutoLeasingUserService _autoLeasingUserService;
         private readonly IAutoleasingVerifyUserService _autoleasingVerifyUserService;
         private readonly IValidator<LoginRequest> _validator;
 
-        public LoginRequestHandler(IValidator<LoginRequest> validator, IAutoleasingVerifyUserService autoleasingVerifyUserService, IAuthorizationService authorizationService, IAutoLeasingUserService autoLeasingUserService,  ITokenService tokenService)
+        public LoginRequestHandler(ILoginRequestsLogService loginRequestsLogService, IValidator<LoginRequest> validator, IAutoleasingVerifyUserService autoleasingVerifyUserService, IAuthorizationService authorizationService, IAutoLeasingUserService autoLeasingUserService,  ITokenService tokenService)
         {
+            _loginRequestsLogService = loginRequestsLogService;
             _authorizationService = authorizationService;
             _autoLeasingUserService = autoLeasingUserService;
             _autoleasingVerifyUserService = autoleasingVerifyUserService;
@@ -38,66 +43,107 @@ namespace Identity.Application.Features.Authorization.Queries
 
         public async Task<Result<LoginResponse>> Handle(LoginRequest request, CancellationToken cancellationToken)
         {
-            Result<LoginResponse> result = new Result<LoginResponse>();
+            var log = new LoginRequestsLog() { };
+            var startTime = DateTime.UtcNow;
+            log.Email = request.Email;
+            log.Channel = request.Channel.ToString();
+            log.ServerIp = "ServerIp";
+            log.UserAgent = "User Agent";
+            log.UserIp = "ServerIP";
+
+            Result<LoginResponse> output = new Result<LoginResponse>();
             var validationResult = await _validator.ValidateAsync(request);
             if (!validationResult.IsValid)
             {
-                result.ErrorDescription = validationResult.ToString(",");
-                result.ErrorCode = 2;
-                return result;
+                output.ErrorDescription = validationResult.ToString(",");
+                output.ErrorCode = (int)ErrorCodes.EmptyInputParamter;
+                log.ErrorCode = output.ErrorCode;
+                log.ErrorDescription = output.ErrorDescription;// TODO get from  String project language base -ar/-en
+                log.ServiceResponseTimeInSeconds = DateTime.UtcNow.Subtract(startTime).TotalSeconds;
+                await _loginRequestsLogService.LogAsync(log);
+                return output;
             }
 
             var authrizedUser = await _authorizationService.GetUserByEmailAsync(request.Email);
 
             if (authrizedUser == null)
             {
-                result.ErrorDescription = "user not found";
-                result.ErrorCode = 2;
-                return result;
+                output.ErrorDescription = "login_incorrect_password_message";
+                output.ErrorCode = (int)ErrorCodes.EmptyInputParamter;
+                
+                log.ErrorCode = output.ErrorCode;
+                log.ErrorDescription = "autoleasingUser is null for email " + request.Email;
+                log.ServiceResponseTimeInSeconds = DateTime.UtcNow.Subtract(startTime).TotalSeconds;
+                await _loginRequestsLogService.LogAsync(log);
+                
+                return output;
             }
 
             var autoLeasingUser = await _autoLeasingUserService.GetUserByEmailAsync(authrizedUser.Email!);
 
             if (autoLeasingUser == null)
             {
-                result.ErrorDescription = "user not found";
-                result.ErrorCode = 3;
-                return result;
+                output.ErrorDescription = "login_incorrect_password_message";
+                output.ErrorCode = (int)ErrorCodes.EmptyInputParamter;
+
+                log.ErrorCode = output.ErrorCode;
+                log.ErrorDescription = "autoleasingUser is null for email " + request.Email;
+                log.ServiceResponseTimeInSeconds = DateTime.UtcNow.Subtract(startTime).TotalSeconds;
+                await _loginRequestsLogService.LogAsync(log);
+
+                return output;
             }
             if (autoLeasingUser.LockoutEndDateUtc > DateTime.UtcNow)
             {
-                result.ErrorDescription = "Account locked";
-                result.ErrorCode = 4;
-                return result;
+                output.ErrorDescription = "Account is Locked";
+                output.ErrorCode = (int)ErrorCodes.EmptyInputParamter;
+
+                log.ErrorCode = output.ErrorCode;
+                log.ErrorDescription = "Account is Locked";
+                log.ServiceResponseTimeInSeconds = DateTime.UtcNow.Subtract(startTime).TotalSeconds;
+                await _loginRequestsLogService.LogAsync(log);
+                return output;
             }
             if (autoLeasingUser.IsDeleted.HasValue && autoLeasingUser.IsDeleted.Value)
             {
-                result.ErrorDescription = "Account deleted";
-                result.ErrorCode = 5;
-                return result;
+                output.ErrorDescription = "Account is deleted";
+                output.ErrorCode = (int)ErrorCodes.EmptyInputParamter;
+
+                log.ErrorCode = output.ErrorCode;
+                log.ErrorDescription = "Account is deleted";
+                log.ServiceResponseTimeInSeconds = DateTime.UtcNow.Subtract(startTime).TotalSeconds;
+                await _loginRequestsLogService.LogAsync(log);
+                return output;
             }
             if (!SecurityUtilities.VerifyHashedData(autoLeasingUser.PasswordHash, request.Password))
             {
-                result.ErrorDescription = "incorrect username and password";
-                result.ErrorCode = 6;
-                return result;
+                output.ErrorDescription = "login_incorrect_password_message";
+                output.ErrorCode = (int)ErrorCodes.NotAuthorized;
+
+                log.ErrorCode = output.ErrorCode;
+                log.ErrorDescription = "incorrect username and password asp net user " + request.Password.Trim() +
+                                           " and hashed password is " + autoLeasingUser.PasswordHash;
+                log.ServiceResponseTimeInSeconds = DateTime.UtcNow.Subtract(startTime).TotalSeconds;
+                await _loginRequestsLogService.LogAsync(log);
+                return output;
             }
 
+            var OTP = GenerateRendomCode();
             var verifyData = new AutoleasingVerifyUser();
-            verifyData.CreatedDate = DateTime.Now;
+            verifyData.CreatedDate = DateTime.UtcNow;
             verifyData.UserId = authrizedUser.Id;
-            verifyData.VerificationCode = GenerateRendomCode().ToString();
+            verifyData.VerificationCode = OTP.ToString();
             verifyData.ExpiryDate = DateTime.Now.AddMinutes(15);
-            verifyData.MethodName = "AutoLeasingServiceCoreLogin";
+            verifyData.MethodName = "PortalLogin";
             await _autoleasingVerifyUserService.InsertAsync(verifyData);
 
 
             //TODO send SMS by configured Provider
             var token = _tokenService.GenerateToken(authrizedUser.Id);
-            result.ErrorDescription = "success";
-            result.ErrorCode = 1;
-            result.Data = new LoginResponse() { VerificationCode = verifyData.VerificationCode, Token = token };
-            return result;
+            output.ErrorDescription = "success";
+            output.ErrorCode = 1;
+            output.Data = new LoginResponse() { VerificationCode = verifyData.VerificationCode, Token = token };
+            return output;
         }
 
         private int GenerateRendomCode()

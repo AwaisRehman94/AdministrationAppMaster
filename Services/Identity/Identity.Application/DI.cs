@@ -28,7 +28,7 @@ namespace Identity.Application
             services.AddTransient<IAutoleasingVerifyUserService, AutoleasingVerifyUserService>();
             services.AddScoped<IValidator<LoginRequest>, LoginRequestValidator>();
 
-            services.AddTransient<ITokenService, TokenService>();
+            //services.AddTransient<ITokenService, TokenService>();
 
 
             // services.AddScoped<IDeductibleService, DeductibleService>();
