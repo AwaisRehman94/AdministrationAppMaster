@@ -6,6 +6,8 @@ using Identity.API;
 using Common.Application;
 using Common.Infrastructure;
 using Identity.Application.Middlewares;
+using Common.Domain.Utilities;
+using Microsoft.AspNetCore.HttpOverrides;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -27,6 +29,12 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
+app.UseForwardedHeaders(new ForwardedHeadersOptions
+{
+    ForwardedHeaders = ForwardedHeaders.XForwardedFor |
+    ForwardedHeaders.XForwardedProto
+});
+Utilities.Configure(app.Services.GetRequiredService<IHttpContextAccessor>());
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {

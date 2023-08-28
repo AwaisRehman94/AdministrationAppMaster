@@ -13,6 +13,7 @@ namespace Common.Domain.Enums
         Medical = 7,
         Home = 8,
         Aman = 9,
-        Leasing
+        Leasing=10,
+        AutoLeasingCore
     }
 }

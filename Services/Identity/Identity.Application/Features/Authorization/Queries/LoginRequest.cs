@@ -13,6 +13,8 @@ using Common.Domain.Entities.LogEntities;
 using Common.Application.Common.Interfaces;
 using Common.Application.Common.Interfaces.Persistence.Logs;
 using Common.Domain.Enums;
+using Tameenk.Resources.WebResources;
+using Common.Domain.Utilities;
 
 namespace Identity.Application.Features.Authorization.Queries
 {
@@ -47,9 +49,9 @@ namespace Identity.Application.Features.Authorization.Queries
             var startTime = DateTime.UtcNow;
             log.Email = request.Email;
             log.Channel = request.Channel.ToString();
-            log.ServerIp = "ServerIp";
-            log.UserAgent = "User Agent";
-            log.UserIp = "ServerIP";
+            log.ServerIp = Utilities.GetInternalServerIP();
+            log.UserAgent = Utilities.GetUserAgent();
+            log.UserIp = Utilities.GetUserIPAddress();
 
             Result<LoginResponse> output = new Result<LoginResponse>();
             var validationResult = await _validator.ValidateAsync(request);
@@ -58,7 +60,7 @@ namespace Identity.Application.Features.Authorization.Queries
                 output.ErrorDescription = validationResult.ToString(",");
                 output.ErrorCode = (int)ErrorCodes.EmptyInputParamter;
                 log.ErrorCode = output.ErrorCode;
-                log.ErrorDescription = output.ErrorDescription;// TODO get from  String project language base -ar/-en
+                log.ErrorDescription = output.ErrorDescription;
                 log.ServiceResponseTimeInSeconds = DateTime.UtcNow.Subtract(startTime).TotalSeconds;
                 await _loginRequestsLogService.LogAsync(log);
                 return output;
@@ -68,7 +70,7 @@ namespace Identity.Application.Features.Authorization.Queries
 
             if (authrizedUser == null)
             {
-                output.ErrorDescription = "login_incorrect_password_message";
+                output.ErrorDescription = WebResources.ResourceManager.GetString("login_incorrect_password_message", System.Globalization.CultureInfo.GetCultureInfo(request.Language))!;
                 output.ErrorCode = (int)ErrorCodes.EmptyInputParamter;
                 
                 log.ErrorCode = output.ErrorCode;
@@ -83,7 +85,7 @@ namespace Identity.Application.Features.Authorization.Queries
 
             if (autoLeasingUser == null)
             {
-                output.ErrorDescription = "login_incorrect_password_message";
+                output.ErrorDescription = WebResources.ResourceManager.GetString("login_incorrect_password_message", System.Globalization.CultureInfo.GetCultureInfo(request.Language))!;
                 output.ErrorCode = (int)ErrorCodes.EmptyInputParamter;
 
                 log.ErrorCode = output.ErrorCode;
@@ -95,7 +97,7 @@ namespace Identity.Application.Features.Authorization.Queries
             }
             if (autoLeasingUser.LockoutEndDateUtc > DateTime.UtcNow)
             {
-                output.ErrorDescription = "Account is Locked";
+                output.ErrorDescription = WebResources.ResourceManager.GetString("AccountLocked", System.Globalization.CultureInfo.GetCultureInfo(request.Language))!;
                 output.ErrorCode = (int)ErrorCodes.EmptyInputParamter;
 
                 log.ErrorCode = output.ErrorCode;
@@ -106,7 +108,7 @@ namespace Identity.Application.Features.Authorization.Queries
             }
             if (autoLeasingUser.IsDeleted.HasValue && autoLeasingUser.IsDeleted.Value)
             {
-                output.ErrorDescription = "Account is deleted";
+                output.ErrorDescription = WebResources.ResourceManager.GetString("login_incorrect_password_message", System.Globalization.CultureInfo.GetCultureInfo(request.Language))!;
                 output.ErrorCode = (int)ErrorCodes.EmptyInputParamter;
 
                 log.ErrorCode = output.ErrorCode;
@@ -117,7 +119,7 @@ namespace Identity.Application.Features.Authorization.Queries
             }
             if (!SecurityUtilities.VerifyHashedData(autoLeasingUser.PasswordHash, request.Password))
             {
-                output.ErrorDescription = "login_incorrect_password_message";
+                output.ErrorDescription = WebResources.ResourceManager.GetString("login_incorrect_password_message", System.Globalization.CultureInfo.GetCultureInfo(request.Language))!;
                 output.ErrorCode = (int)ErrorCodes.NotAuthorized;
 
                 log.ErrorCode = output.ErrorCode;
@@ -137,11 +139,14 @@ namespace Identity.Application.Features.Authorization.Queries
             verifyData.MethodName = "PortalLogin";
             await _autoleasingVerifyUserService.InsertAsync(verifyData);
 
-
             //TODO send SMS by configured Provider
             var token = _tokenService.GenerateToken(authrizedUser.Id);
-            output.ErrorDescription = "success";
-            output.ErrorCode = 1;
+            output.ErrorDescription = WebResources.ResourceManager.GetString("Success", System.Globalization.CultureInfo.GetCultureInfo(request.Language))!;
+            output.ErrorCode = (int)ErrorCodes.Success;
+            log.ErrorCode = output.ErrorCode;
+            log.ErrorDescription = "Success";
+            log.ServiceResponseTimeInSeconds = DateTime.UtcNow.Subtract(startTime).TotalSeconds;
+            await _loginRequestsLogService.LogAsync(log);
             output.Data = new LoginResponse() { VerificationCode = verifyData.VerificationCode, Token = token };
             return output;
         }

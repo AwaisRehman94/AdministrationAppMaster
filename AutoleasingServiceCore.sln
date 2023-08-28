@@ -33,6 +33,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Inquiry.API", "Services\Inq
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Identity.API", "Services\Identity\Identity.API\Identity.API.csproj", "{05BCF75A-8B22-4959-BDB9-7A4D65FB4484}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tameenk.Resources", "Services\Common\Tameenk.Resources\Tameenk.Resources.csproj", "{393EE6DD-CB4D-4828-838F-861ED8E80FC9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -83,6 +85,10 @@ Global
 		{05BCF75A-8B22-4959-BDB9-7A4D65FB4484}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{05BCF75A-8B22-4959-BDB9-7A4D65FB4484}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{05BCF75A-8B22-4959-BDB9-7A4D65FB4484}.Release|Any CPU.Build.0 = Release|Any CPU
+		{393EE6DD-CB4D-4828-838F-861ED8E80FC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{393EE6DD-CB4D-4828-838F-861ED8E80FC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{393EE6DD-CB4D-4828-838F-861ED8E80FC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{393EE6DD-CB4D-4828-838F-861ED8E80FC9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -102,6 +108,7 @@ Global
 		{093705B9-D3AF-4F84-99A0-69D5640AA052} = {EEB0BE1D-478B-42AE-8B76-67A13554CA76}
 		{E6C9A05B-EC36-4406-9610-636DDF897B10} = {EEB0BE1D-478B-42AE-8B76-67A13554CA76}
 		{05BCF75A-8B22-4959-BDB9-7A4D65FB4484} = {3B2817C7-1D0B-431B-9F42-39B6206C4DD2}
+		{393EE6DD-CB4D-4828-838F-861ED8E80FC9} = {D0858042-97FE-4D5B-8F11-A382B562BABB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {409FD2AC-F6F9-41FB-8876-40D406E1ACE9}
