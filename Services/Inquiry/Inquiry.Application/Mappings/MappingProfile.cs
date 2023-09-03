@@ -1,7 +1,7 @@
 ﻿using System.Reflection;
 
 using AutoMapper;
-
+using Common.Domain.DomainEntities.Entities.DomainEntities;
 using Common.Domain.Entities;
 
 using Inquiry.Application.Features.Lookups.Queries.GetBenefits;

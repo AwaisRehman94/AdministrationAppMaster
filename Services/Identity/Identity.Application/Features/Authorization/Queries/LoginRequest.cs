@@ -26,14 +26,14 @@ namespace Identity.Application.Features.Authorization.Queries
 
     public class LoginRequestHandler : IRequestHandler<LoginRequest, Result<LoginResponse>>
     {
-        private readonly ILoginRequestsLogService _loginRequestsLogService;
+        private readonly ILogService<LoginRequestsLog> _loginRequestsLogService;
         private readonly ITokenService _tokenService;
         private readonly IAuthorizationService _authorizationService;
         private readonly IAutoLeasingUserService _autoLeasingUserService;
         private readonly IAutoleasingVerifyUserService _autoleasingVerifyUserService;
         private readonly IValidator<LoginRequest> _validator;
 
-        public LoginRequestHandler(ILoginRequestsLogService loginRequestsLogService, IValidator<LoginRequest> validator, IAutoleasingVerifyUserService autoleasingVerifyUserService, IAuthorizationService authorizationService, IAutoLeasingUserService autoLeasingUserService,  ITokenService tokenService)
+        public LoginRequestHandler(ILogService<LoginRequestsLog> loginRequestsLogService, IValidator<LoginRequest> validator, IAutoleasingVerifyUserService autoleasingVerifyUserService, IAuthorizationService authorizationService, IAutoLeasingUserService autoLeasingUserService,  ITokenService tokenService)
         {
             _loginRequestsLogService = loginRequestsLogService;
             _authorizationService = authorizationService;
@@ -45,7 +45,7 @@ namespace Identity.Application.Features.Authorization.Queries
 
         public async Task<Result<LoginResponse>> Handle(LoginRequest request, CancellationToken cancellationToken)
         {
-            var log = new LoginRequestsLog() { };
+            var log = new LoginRequestsLog();
             var startTime = DateTime.UtcNow;
             log.Email = request.Email;
             log.Channel = request.Channel.ToString();

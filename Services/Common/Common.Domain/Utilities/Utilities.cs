@@ -11,6 +11,11 @@ namespace Common.Domain.Utilities;
 
 public class Utilities
 {
+    public const string InternationalPhoneCode = "00";
+    public const string InternationalPhoneSymbol = "+";
+    public const string Zero = "0";
+    public const string SaudiInternationalPhoneCode = "966";
+
     private static IHttpContextAccessor _httpContextAccessor;
 
     public static void Configure(IHttpContextAccessor httpContextAccessor)
@@ -67,5 +72,23 @@ public class Utilities
         {
             return string.Empty;
         }
+    }
+
+    public static string ValidatePhoneNumber(string phoneNumber)
+    {
+        if (phoneNumber.StartsWith(InternationalPhoneCode))
+            phoneNumber = phoneNumber.Substring(InternationalPhoneCode.Length);
+        else if (phoneNumber.StartsWith(InternationalPhoneSymbol))
+            phoneNumber = phoneNumber.Substring(InternationalPhoneSymbol.Length);
+
+        if (!phoneNumber.StartsWith(SaudiInternationalPhoneCode))
+        {
+            if (phoneNumber.StartsWith(Zero))
+                phoneNumber = phoneNumber.Substring(Zero.Length);
+
+            phoneNumber = SaudiInternationalPhoneCode + phoneNumber;
+        }
+
+        return phoneNumber;
     }
 }

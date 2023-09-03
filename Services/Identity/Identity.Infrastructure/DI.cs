@@ -10,7 +10,8 @@ using Identity.Infrastructure.Persistence;
 using Identity.Infrastructure.Services;
 using Identity.Infrastructure.Repositories;
 using Identity.Infrastructure.Persistence.Entities;
- 
+using Common.Application.Common.Interfaces.Persistence;
+
 namespace Identity.Infrastructure
 {
     public static class DI
@@ -30,7 +31,7 @@ namespace Identity.Infrastructure
             }
             services.AddDefaultIdentity<AspNetUser>().AddRoles<IdentityRole>().AddEntityFrameworkStores<IdentityDbContext>();
             
-            services.AddTransient(typeof(IRepository<>), typeof(IdentityRepositoryBase<>));
+            services.AddTransient(typeof(IIdentityRepository<>), typeof(IdentityRepositoryBase<>));
             services.AddTransient<IAuthorizationService, AuthorizationService>();
  
             services.AddCors();

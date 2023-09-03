@@ -4,6 +4,7 @@ using AutoMapper.QueryableExtensions;
 
 using Common.Application.Common.Interfaces.Persistence;
 using Common.Application.Common.Mappings;
+using Common.Domain.DomainEntities.Entities.DomainEntities;
 using Common.Domain.Entities;
 
 using Inquiry.Application.Common.Interfaces;

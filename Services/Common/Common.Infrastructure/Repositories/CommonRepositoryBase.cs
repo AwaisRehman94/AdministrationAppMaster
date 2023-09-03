@@ -1,5 +1,6 @@
 ﻿
 using Common.Application.Common.Interfaces.Persistence;
+using Common.Domain.DomainEntities.Entities.DomainEntities;
 using Common.Domain.Entities;
 using Common.Infrastructure.Persistence;
 
@@ -9,8 +10,8 @@ namespace Common.Infrastructure.Repositories
 {
     public class CommonRepositoryBase<T> : IRepository<T> where T : class
     {
-        protected readonly CommonDbContext _commonDbContext;
-        public CommonRepositoryBase(CommonDbContext context)
+        protected readonly AutoLeasingServiceContext _commonDbContext;
+        public CommonRepositoryBase(AutoLeasingServiceContext context)
         {
             _commonDbContext = context;
         }

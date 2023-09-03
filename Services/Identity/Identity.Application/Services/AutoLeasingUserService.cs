@@ -6,15 +6,15 @@ using AutoMapper.QueryableExtensions;
 using Identity.Application.Common.Interfaces;
 using Identity.Application.Common.Models;
 using Identity.Domain.Entities;
-
+using Common.Application.Common.Interfaces.Persistence;
 
 namespace Identity.Application.Services
 {
     internal class AutoLeasingUserService : IAutoLeasingUserService
     {
-        private readonly IRepository<AutoleasingUser> _repository;
+        private readonly IIdentityRepository<AutoleasingUser> _repository;
         private readonly IMapper _mapper;
-        public AutoLeasingUserService(IRepository<AutoleasingUser> repository, IMapper mapper)
+        public AutoLeasingUserService(IIdentityRepository<AutoleasingUser> repository, IMapper mapper)
         {
             _repository = repository;
             _mapper = mapper;

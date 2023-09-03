@@ -8,14 +8,15 @@ using Inquiry.Application.Features.Lookups.Queries.GetDeductibles;
 using Common.Application.Common.Interfaces.Persistence;
 using Common.Application.Common.Mappings;
 using Common.Domain.Entities;
+using Common.Domain.DomainEntities.Entities.DomainEntities;
 
 namespace Inquiry.Application.Services
 {
     public class DeductibleService : IDeductibleService
     {
-        private readonly IRepository<AutoleasingDeductible> _repository;
+        private readonly IRepository<AutoleasingDeductibles> _repository;
         private readonly IMapper _mapper;
-        public DeductibleService(IRepository<AutoleasingDeductible> repository, IMapper mapper)
+        public DeductibleService(IRepository<AutoleasingDeductibles> repository, IMapper mapper)
         {
             _repository = repository;
             _mapper = mapper;

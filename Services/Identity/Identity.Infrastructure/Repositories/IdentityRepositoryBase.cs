@@ -1,4 +1,5 @@
 ﻿
+using Common.Application.Common.Interfaces.Persistence;
 using Common.Domain.Entities;
 using Identity.Application.Common.Interfaces;
  
@@ -8,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
  
 namespace Identity.Infrastructure.Repositories
 {
-    public class IdentityRepositoryBase<T> : IRepository<T> where T : class
+    public class IdentityRepositoryBase<T> : IIdentityRepository<T> where T : class
     {
         protected readonly IdentityDbContext _applicationDbContext;
         public IdentityRepositoryBase(IdentityDbContext context)

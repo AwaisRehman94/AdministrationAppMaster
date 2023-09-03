@@ -1,402 +1,1962 @@
 ﻿{
    "CodeGenerationMode": 3,
-   "ContextClassName": "AutoLeasingServiceLogContext",
+   "ContextClassName": "AutoLeasingServiceContext",
    "ContextNamespace": null,
    "DefaultDacpacSchema": null,
    "FilterSchemas": false,
    "IncludeConnectionString": false,
    "ModelNamespace": null,
    "OutputContextPath": null,
-   "OutputPath": "Entities\\LogEntities\\",
+   "OutputPath": "Entities\\DomainEntities\\",
    "PreserveCasingWithRegex": true,
-   "ProjectRootNamespace": "Common.Domain",
+   "ProjectRootNamespace": "Common.Domain.DomainEntities",
    "Schemas": null,
    "SelectedHandlebarsLanguage": 0,
    "SelectedToBeGenerated": 0,
    "T4TemplatePath": null,
    "Tables": [
       {
-         "Name": "[dbo].[ACIGPolicyServiceRequestLogs]",
+         "Name": "[dbo].[__MigrationHistory]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[ACIGQuotationServiceRequestLogs]",
+         "Name": "[dbo].[AdditionalDriverRelationship]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[AddressRequestLogs]",
+         "Name": "[dbo].[AdditionalInfo]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[AdminRequestLog]",
+         "Name": "[dbo].[Address]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[AhliaPolicyServiceRequestLogs]",
+         "Name": "[dbo].[AspNetRoles]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[AhliaQuotationServiceRequestLogs]",
+         "Name": "[dbo].[AspNetUserClaims]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[AICCPolicyServiceRequestLogs]",
+         "Name": "[dbo].[AspNetUserLogins]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[AICCQuotationServiceRequestLogs]",
+         "Name": "[dbo].[AspNetUserRoles]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[AlalamiyaPolicyServiceRequestLogs]",
+         "Name": "[dbo].[AspNetUsers]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[AlalamiyaQuotationServiceRequestLogs]",
+         "Name": "[dbo].[AtoleasingTicketTypes]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[AllianzPolicyServiceRequestLogs]",
+         "Name": "[dbo].[Attachment]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[AllianzQuotationServiceRequestLogs]",
+         "Name": "[dbo].[AutoleasingAgencyRepair]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[AlRajhiPolicyServiceRequestLogs]",
+         "Name": "[dbo].[AutoleasingAgencyRepairHistory]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[AlRajhiQuotationServiceRequestLogs]",
+         "Name": "[dbo].[AutoleasingBenefit]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[AmanaPolicyServiceRequestLogs]",
+         "Name": "[dbo].[AutoleasingDeductibles]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[AmanaQuotationServiceRequestLogs]",
+         "Name": "[dbo].[AutoleasingDepreciationSetting]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[ApplepayErrorLogs]",
+         "Name": "[dbo].[AutoleasingDepreciationSettingHistory]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[ArabianShieldPolicyServiceRequestLogs]",
+         "Name": "[dbo].[AutoleasingInitialQuotationCompanies]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[ArabianShieldQuotationServiceRequestLogs]",
+         "Name": "[dbo].[AutoleasingMinimumPremium]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[AutoleasingAdminRequestLog]",
+         "Name": "[dbo].[AutoleasingMinimumPremiumHistory]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[AXAPolicyServiceRequestLogs]",
+         "Name": "[dbo].[AutoleasingQuotationForm]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[AXAQuotationServiceRequestLogs]",
+         "Name": "[dbo].[AutoleasingQuotationForm_OldHistory]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[BCarePolicyServiceRequestLogs]",
+         "Name": "[dbo].[AutoleasingQuotationForm_OldHistory_Old]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[BCareQuotationServiceRequestLogs]",
+         "Name": "[dbo].[AutoleasingQuotationFormSettings]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[BurujPolicyServiceRequestLogs]",
+         "Name": "[dbo].[AutoleasingQuotationResponseCache]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[BurujQuotationServiceRequestLogs]",
+         "Name": "[dbo].[AutoleasingRenewalPolicyStatistic]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[CancellationServiceRequestLog]",
+         "Name": "[dbo].[AutoleasingSelectedBenifits]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[CheckoutRequestLog]",
+         "Name": "[dbo].[AutoleasingUsers]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[CompetitionRequestLogs]",
+         "Name": "[dbo].[AutoleasingVerifyUsers]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[EmailLog]",
+         "Name": "[dbo].[AutoleasingWalletHistory]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[FirebaseNotificationLog]",
+         "Name": "[dbo].[AutomatedTestIntegrationTransaction]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[ForbiddenRequestLogs]",
+         "Name": "[dbo].[Bank]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[GGIPolicyServiceRequestLogs]",
+         "Name": "[dbo].[BankCode]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[GGIQuotationServiceRequestLog]",
+         "Name": "[dbo].[BankInsuranceCompany]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[GulfUnionPolicyServiceRequestLogs]",
+         "Name": "[dbo].[BankNins]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[GulfUnionQuotationServiceRequestLogs]",
+         "Name": "[dbo].[BcareWithdrawalWinner]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[IdentityRequestLog]",
+         "Name": "[dbo].[BcareWithdrawalWinnerOld]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[InquiryRequestLog]",
+         "Name": "[dbo].[Benefit]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[IntegrationTransaction]",
+         "Name": "[dbo].[BenefitServices]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[IVRServicesLogs]",
+         "Name": "[dbo].[BreakingSystem]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[LeasingAddBenefitLog]",
+         "Name": "[dbo].[CameraType]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[LeasingAddDriverLog]",
+         "Name": "[dbo].[CancellationRequest]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[LeasingPortalLog]",
+         "Name": "[dbo].[CardIDType]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[Log]",
+         "Name": "[dbo].[Career]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[LoginRequestsLog]",
+         "Name": "[dbo].[Checkout_HyperpayPaymentReq]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[MalathPolicyServiceRequestLogs]",
+         "Name": "[dbo].[Checkout_PayfortPaymentReq]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[MalathQuotationServiceRequestLogs]",
+         "Name": "[dbo].[Checkout_RiyadBankMigsRequest]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[MedGulfPolicyServiceRequestLogs]",
+         "Name": "[dbo].[CheckoutAdditionalDrivers]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[MedGulfQuotationServiceRequestLogs]",
+         "Name": "[dbo].[CheckoutCarImages]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[NajmServiceRequestLogs]",
+         "Name": "[dbo].[CheckoutDetails]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[NotificationLog]",
+         "Name": "[dbo].[CheckoutDriverInfo]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[NotPurchasedQuotations]",
+         "Name": "[dbo].[CheckoutUsers]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[OwnDamageSMSLog]",
+         "Name": "[dbo].[CheckoutUsersTemp]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[PaymentServiceRequestLogs]",
+         "Name": "[dbo].[City]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[PdfGenerationLog]",
+         "Name": "[dbo].[CityCenter]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[PolicyModificationLog]",
+         "Name": "[dbo].[Cityold]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[PolicyNotificationLogs]",
+         "Name": "[dbo].[Clients]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[PolicyRequestLog]",
+         "Name": "[dbo].[CommissionsAndFees]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[PowerBIServicesLog]",
+         "Name": "[dbo].[CommissionsAndFeesBackup]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[ProfileRequestsLog]",
+         "Name": "[dbo].[CommissionsAndFeesBackupMay2022]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[PromotionRequestLog]",
+         "Name": "[dbo].[CommissionsAndFeesTemp]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[QuotationRequestLog]",
+         "Name": "[dbo].[CompanyBankAccounts]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[RegistrationRequestsLog]",
+         "Name": "[dbo].[Contact]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[SAICOPolicyServiceRequestLogs]",
+         "Name": "[dbo].[ContactUs]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[SAICOQuotationServiceRequestLogs]",
+         "Name": "[dbo].[CorporateAccount]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[SalamaPolicyServiceRequestLogs]",
+         "Name": "[dbo].[CorporateUsers]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[SalamaQuotationServiceRequestLogs]",
+         "Name": "[dbo].[CorporateVerifyUsers]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[SaqrPolicyServiceRequestLogs]",
+         "Name": "[dbo].[CorporateWalletHistory]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[SaqrQuotationServiceRequestLogs]",
+         "Name": "[dbo].[Country]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[SaudiPostServiceRequestLogs]",
+         "Name": "[dbo].[CustomCardInfo]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[ServiceRequestLog]",
+         "Name": "[dbo].[CustomCardQueue]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[SMSLog]",
+         "Name": "[dbo].[Deductible]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[SMSNotification]",
+         "Name": "[dbo].[DeservingDiscount]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[SMSNotification_old]",
+         "Name": "[dbo].[DeservingDiscountTemp]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[SMSNotificationTemp]",
+         "Name": "[dbo].[DistanceRange]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[SolidarityPolicyServiceRequestLogs]",
+         "Name": "[dbo].[Driver]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[SolidarityQuotationServiceRequestLogs]",
+         "Name": "[dbo].[DriverExtraLicense]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[TawuniyaPolicyServiceRequestLogs]",
+         "Name": "[dbo].[DriverLicense]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[TawuniyaQuotationServiceRequestLogs]",
+         "Name": "[dbo].[DriverMedicalCondition]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[TokioMarinePolicyServiceRequestLogs]",
+         "Name": "[dbo].[DriverType]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[TokioMarineQuotationServiceRequestLogs]",
+         "Name": "[dbo].[DriverViolation]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[TUICPolicyServiceRequestLogs]",
+         "Name": "[dbo].[DrivingLicenceYear]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[TUICQuotationServiceRequestLogs]",
+         "Name": "[dbo].[EdaatCompany]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[UCAPolicyServiceRequestLogs]",
+         "Name": "[dbo].[EdaatCustomer]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[UCAQuotationServiceRequestLogs]",
+         "Name": "[dbo].[EdaatNotification]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[UserTicketLog]",
+         "Name": "[dbo].[EdaatProduct]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[WafaPolicyServiceRequestLogs]",
+         "Name": "[dbo].[EdaatRequest]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[WafaQuotationServiceRequestLogs]",
+         "Name": "[dbo].[EdaatResponse]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[WalaaPolicies]",
+         "Name": "[dbo].[EducationLevel]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[WalaPolicyServiceRequestLogs]",
+         "Name": "[dbo].[EmailSettings]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[WalaQuotationServiceRequestLogs]",
+         "Name": "[dbo].[EndorsmentBenefits]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[WataniyaPolicyServiceRequestLogs]",
+         "Name": "[dbo].[Endorsments]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[WataniyaQuotationServiceRequestLogs]",
+         "Name": "[dbo].[ErrorCode]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[WhatsAppLog]",
+         "Name": "[dbo].[EsalCustomer]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[YakeenServiceRequestLogs]",
+         "Name": "[dbo].[EsalLineItem]",
          "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[EsalProfitMargin]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[EsalRequest]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[EsalResponse]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[EsalSettlement]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[EsalSupplier]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ExpiredTokens]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Gender]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[HyperPayCreateOrder]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[HyperPayNotifications]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[HyperPayNotificationTransactions]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[HyperpayRequest]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[HyperpayResponse]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[HyperPayUpdateOrder]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[IbanHistory]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[InsuaranceCompanyBenefit]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[InsuranceCompany]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[InsuranceCompanyProductTypeConfig]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Insured]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[InsuredAddressesCount]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[InsuredExtraLicenses]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[IntegrationTransaction_ToBeDeleted]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Invoice]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Invoice_Benefit]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Invoice_Driver]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Invoice_TEmp_24March]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[InvoiceFile]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[InvoiceFileTemplates]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Language]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[LeasingUsers]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[LeasingUsersLocationsDeviceInfo]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[LeasingVerifyUsers]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[LicenseType]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Logger]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[MobileAppVersions]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[MOIDetail]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[MorniRequest]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[MorniSMS]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[NajmAccidentResponse]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[NajmResponse]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[NajmStatus]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[NajmStatusHistory]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Nationality]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[NCDFreeYear]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Notification]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[NotificationParameter]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Occupation]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Offer]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[OrderItem]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[OrderItemBenefit]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[OrderItemDriver]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[OtpInfo]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[OwnDamageQueue]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ParkingPlace]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[PayfortPaymentRequest]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[PayfortPaymentResponse]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Payment]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[PaymentMethod]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Policy]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[PolicyAdditionalBenefits]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[PolicyDetails]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[PolicyFile]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[PolicyModification]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[PolicyProcessingQueue]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[PolicyRenewedByCompany]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[PolicyStatus]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[PolicyUpdatePayment]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[PolicyUpdateRequest]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[PolicyUpdateRequestAttachment]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[PolicyUpdReq_PayfortPaymentReq]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[PriceDetail]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[PriceType]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Product]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Product_Benefit]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Product_Driver]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ProductType]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ProfileNotification]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[PromotionProgram]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[PromotionProgramCode]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[PromotionProgramDomain]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[PromotionProgramNins]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[PromotionProgramUser]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[PromotionUser]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[PromotionUser_copy]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Quotation_Product_Benefit]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[QuotationBlockedNins]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[QuotationRequest]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[QuotationRequestAdditionalDrivers]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[QuotationResponse]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[QuotationResponse_LogsGap]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[QuotationResponseCache]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[QuotationResponseNew]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[QuotationShares]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ReasonCode]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Region]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[RegisterTokenLogs]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[RenewalDiscount]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[RenewalPolicies]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[RenwalStatitics_Old]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[RiyadBankMigsRequest]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[RiyadBankMigsResponse]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Role]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[RoleType]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[SadadNotificationMessage]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[SadadNotificationResponse]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[SadadRequest]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[SadadResponse]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ScheduleTask]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[SendNotificationLogs]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Sensor]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Setting]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ShoppingCartItem]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ShoppingCartItemBenefit]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ShoppingCartItemDriver]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[SmsCodes]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[SMSProviderSettings]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[SmsRenewalNotificationRehits]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[SMSSkippedNumbers]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[SpeedStabilizer]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[TabbyCaptureRequests]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[TabbyCaptureResponseDetails]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[TabbyCaptureResponses]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[TabbyNotificationDetails]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[TabbyNotifications]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[TabbyRequestDetails]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[TabbyRequests]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[TabbyResponseDetails]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[TabbyResponses]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[TabbyWebHookDetails]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[TabbyWebHooks]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[TawuniyaProposal]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[TawuniyaTempTable]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[TempPriceDetail]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[UserClaim]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[UserClaimFile]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[UserClaimHistory]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[UserClaimStatus]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[UserFireBaseRegisterationTokens]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[UserInfo]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[UserNotifications]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[UserPurchasedPromotionPrograms]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[UserTicket]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[UserTicketAttachment]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[UserTicketHistory]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[UserTicketStatus]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[UserTicketType]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Vehicle_VehicleSpecification]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[VehicleBodyType]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[VehicleColor]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[VehicleDiscounts]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[VehicleIDType]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[VehicleMaker]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[VehicleMakerTemp]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[VehicleModel]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[VehicleModelTemp]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[VehiclePlateText]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[VehiclePlateType]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[VehicleRequests]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Vehicles]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[VehicleSpecification]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[VehicleTransmissionType]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[VehicleUsage]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[VehicleUsagePercentage]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Violation]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Wareef]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[WareefCategory]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[WareefDescounts]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[WareefDiscountBenefit]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[WataniyaDraftPolicy]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[WataniyaMotorPolicyInfo]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[WataniyaNajmQueue]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[YakeenCityCenter]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[YakeenDrivers]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[YakeenVehicles]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[AutoleasingBankStatistics]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[AutoLeasingBulkAutoRenewal]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[AutoleasingNajmResponseTime]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[CheckIfDiscountCodeIsConsumed]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[CheckIfEmailAlreadyUsed]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[CheckIfIbanAlreadyUsed]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[CheckIfPhoneAlreadyUsed]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[ClientPolicyLogDetailsSP]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[ConfirmUserEmailDB]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[ConfirmUserPhoneNumberDB]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[CopyAdditionalDriversToNewQuotationRequest]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[CreateUserTicket]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[DeleteAllAddress]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[ExpireQuotationResponses]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GatAllWareefData]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GeQuotationByPolicyNo]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetActivePoliciesByNinAndVehicleId]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetAdditionalDrivers]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetAdditionalDrivers2]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetAdditionalDrivers3]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetAdditionalDrivers4]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetAdditionalDriversData]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetAddress]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetAllAddressByNin]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetAllApprovalsFromDBWithFilter]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetAllAutoleaseUsersFromDBWithFilter]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetAllCorporateAccountsFromDBWithFilter]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetAllCorporatePolicies]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetAllCorporateUsersFromDBWithFilter]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetAllDeserviesOfferFromDBWithFilter]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetAllFailedMorniRequests]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetAllMakerModels]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetAllMakersWithFilter]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetAllMissingTransactionsFromHyperPayRequest]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetAllModelsWithFilter]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetAllMyInvoices]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetAllMyPolicies]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetAllMySadadBills]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetAllMyVehicles]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetAllOccupationsWithFilter]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetAllODPolicies]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetAllPoliciesForClaimsFromDBWithFilter]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetAllPoliciesFromDBWithFilter]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetAllPoliciesInfoFromDBWithFilter]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetAllPoliciesWithDuplicateData]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetAllRenewalDiscountCodes]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetAllRenewalPoliciesFormMessagesWithFilter]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetAllRenewalPoliciesStatistics]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetAllTicketsWithFilter]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetAllUserActivePoliciesCount]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetAllVechileCancellationPoliciesFromDBWithFilter]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetAllVehiclePoliciesForClaimsFromDBWithFilter]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetAllWareefDataByCategoryID]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetAllYakeenCityCentersWithFilter]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetAssignedDriverNinByEmail_SP]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetAutoleaseAllInvoices]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetAutoleaseCancelledPolicies]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetAutoleaseFailedPolicies]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetAutoleaseSuccessPolicies]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetAutoleaseSuccessPoliciesForAddDriver]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetAutoleasingBankRenewalPolicies_Old]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetAutoleasingBankRenewalPolicies]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetAutoleasingCompaniesByUserId]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetAutoleasingInvoice]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetAutoleasingPolicyReport]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetAutoleasingQuotaionReport]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetAutoleasingQuotationFormSettings]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetAutoleasingQuotationResponse]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetAutoleasingRenewalQuotationsDetailsForHistorySettings]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetAutoleasingVehiclePoliciesCount]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetAutoleasingWalletHistory]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetAutoleasingWalletReport]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetBcareWithdrawalListWithFilter]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetBulkQuotationsDetails]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetCheckoutAdditionalDrivers]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetCheckoutDetail]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetCheckoutDetailTemp]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetClaimsDataBasedOnFilter]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetClaimsDataBasedOnId]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetCompanyQuotationResponseForInitialQuote]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetCorporateUsersLessThan2000]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetCountPolicies]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetCountPoliciesForAutoleasing]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetCustomCardSuccessPolicies]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetDriverByNin]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetDriverInsuranceRecordData]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetDriverLicense]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetDriversWithMoreThanFivePolicies]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetEdaatNotificationData]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetEdaatRequestsByNationalID]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetExpiredEsalInvoices]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetFailedPaymentTransferredOperation]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetFirstYearPolicyStatistics]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetFromAutoleasingQuotationResponseCache]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetFromCheckoutByReferenceId]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetFromQuotationResponse]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetFromQuotationResponseCache]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetFromQuotationResponseCacheAutoleasing]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetFromScheduleTask]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetFromSMSSkippedNumbers]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetHyperpayRequestByMerchantTransactionId]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetHyperpayRequestByReferenceId]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetHyperpayRequestInfo]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetIInsuredByNationalId]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetIncomeReportWithFilter]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetInsuracneProposalPolices]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetInsuranceProposalDetails]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetIntialQuotation]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetIVRRenewalePolicyDriversCheckoutuserIdAndPolicyNo]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetLastPolicyBySequenceOrCustomCardNumber]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetLastPruchasedCheckoutDetailsByNIN]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetLeasingOrderItemByReferenceId]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetLeasingPolicyData]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetLeasingProfileBasicData]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetleasingprofilePolicyData]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetLeasingShoppingCartItemDB]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetLowestProductByPrice]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetNajmAverageResponseTime]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetOldPolicyData]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetOldQuotationLogDetails]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetOwnDamageQueue]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetPaymentMethodsStatisticsInfo]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetPoliciesCountStatisticsForBcareWithdrawal]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetPolicyData]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetPolicyForOwnDamageSMS]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetPolicyInfoForRenewal]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetPolicyInformationForMorni]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetPolicyInformationForRoadAssistance]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetPolicyPdfFileInfo]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetPolicyProcessingQueue]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetPolicyRequestTime]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetPolicyStatisticsData]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetPreviousPolicyDetails]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetPriceDetailsByProductIdsList]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetProcessingQueue]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetProductDetails]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetPurchaseStatistics]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetQuotationBlockedUserDetails]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetQuotationDetailsByReferenceId]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetQuotationInsuranceCompany]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetQuotationRequestAndDriversInfo]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetQuotationRequestDataDB]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetQuotationRequestDetailsByExternalId]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetQuotationRequestDrivers]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetQuotationRequestVehicleInfo]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetQuotationResponse]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetQuotationsDetails]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetQuotationsFormDetailsByExternalId]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetRenewalPolicies]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetRequestInfoForApplePay]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetSamaReport]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetSamaReportPoliciesFromDBWithFilter]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetShadowAccountDetails]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetShoppingCartItem]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetShoppingCartItemDB]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetSmsRenewalNotificationsRehit]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetTabbyItems]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetTicketDetails]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetTicketHistories]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetTicketHistoryForExport]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetTicketTypes]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetTotalBenfits]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetTotalVehicleSadadRequestsPerDay]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetUserActivePoliciesByNin]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetUserActivePoliciesCount]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetUserAddresses]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetUserByPhone]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetUserDBByID]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetUserFailedPolicies]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetUserInvoiceByInvoiceId]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetUserPolicies]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetUserPromotionProgram]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetUserPromotionProgramInfo]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetUserPromotionProgramInfo1]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetUserSuccessPolicies]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetUserSuccessPoliciesDetails]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetUserSuccessPoliciesDetailsForCorprate]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetUserSuccessPoliciesInfo]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetUserTicketHistory]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetUserTicketsWithLastHistory]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetVehiclePolicy]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetVehiclePolicyDetails]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetVehiclesByNin]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetVehiclesBySequenceNumberORCustomCardNumber]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetVehiclesInfoByExternalId]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetVehiclesInfoById]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetVehicleSuccessPoliciesWithFilterForAddBenefits]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetVehicleSuccessPoliciesWithFilterForAddvechiledriver]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetVerifiedEmailCheckoutDetail]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetWareefCategoryPartners]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetWareefDiscountsListSP]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetWareefItemsDetails]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetWataniyaNajmProcessingQueue]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[InsertIntoProcessingQueue]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[InsertUserTicketAttahment]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[IVRGetLastPolicyBySequenceOrCustomCardNumber]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[MegaReport]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[NajmResponseTime]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[PolicyCheckoutDetails]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[policyInfoForOD]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[RemoveUserIdFromQuotationRequest]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[RenwalStatitics_OldTable]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[SamaStatisticsCountReport]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[SamaStatisticsReport_Test]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[sp_WhoIsActive]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[SuccessPolicystatistics]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[UpdateAutoleasingQuotationForm_OldHistory]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[UpdateCheckoutWithPaymentStatus]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[UpdateCheckoutWithPolicyStatus]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[UpdateHyperpayRequestStatus]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[UpdateQuotationRequestAdditionalDriversRelationShip]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[UpdateQuotationRequestWithNOA]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[UpdateQuotationResponseToBeCheckedout]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[updateRenewalStatiscs_old]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[UpdateScheduleTask]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[UpdateUserPromotionProgramWithNationalId]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[ConvertCarPlateTextToEn]",
+         "ObjectType": 2
       }
    ],
-   "UiHint": "win-f4a9h1e4344\\motor.AutoLeasingServiceLog.dbo",
+   "UiHint": "win-f4a9h1e4344\\motor.AutoLeasingService_New.dbo",
    "UncountableWords": null,
    "UseBoolPropertiesWithoutDefaultSql": false,
    "UseDatabaseNames": false,
