@@ -1,10 +1,9 @@
 ﻿
 using Common.Application.Common.Interfaces.Persistence;
-using Common.Domain.DomainEntities.Entities.DomainEntities;
-using Common.Domain.Entities;
-using Common.Infrastructure.Persistence;
-
+ using Common.Domain.Entities;
+ 
 using Microsoft.EntityFrameworkCore;
+using AutoLeasingServiceContext = Common.Infrastructure.Persistence.AutoLeasingServiceContext;
 
 namespace Common.Infrastructure.Repositories
 {

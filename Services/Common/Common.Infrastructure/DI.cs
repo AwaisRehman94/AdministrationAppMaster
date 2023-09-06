@@ -8,7 +8,8 @@ using Common.Infrastructure.Persistence;
 using Common.Infrastructure.Repositories;
 using Common.Application.Common.Interfaces.Persistence.Logs;
 using Common.Application.Services.Logs;
-using Common.Domain.DomainEntities.Entities.DomainEntities;
+//using Common.Domain.DomainEntities.Entities.DomainEntities;
+using AutoLeasingServiceContext = Common.Infrastructure.Persistence.AutoLeasingServiceContext;
 
 namespace Common.Infrastructure
 {
