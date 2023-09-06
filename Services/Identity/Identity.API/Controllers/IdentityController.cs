@@ -30,7 +30,7 @@ namespace Identity.API.Controllers
         [Authorize]
         public ActionResult<string> Demo()
         {
-            var result = "sdfdsfsdf";
+            var result = "i am authorized response";
             return result;
         }
     }
