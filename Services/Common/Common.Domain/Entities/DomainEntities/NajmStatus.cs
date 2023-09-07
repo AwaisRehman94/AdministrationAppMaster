@@ -15,5 +15,5 @@ public partial class NajmStatus
 
     public string NameAr { get; set; }
 
-    public virtual ICollection<Policy> Policy { get; set; } = new List<Policy>();
+    // public virtual ICollection<Policy> Policy { get; set; } = new List<Policy>();
 }

@@ -3,14 +3,14 @@ using Common.Application.Common.Interfaces.Persistence;
  using Common.Domain.Entities;
  
 using Microsoft.EntityFrameworkCore;
-using AutoLeasingServiceContext = Common.Infrastructure.Persistence.AutoLeasingServiceContext;
+using CommonDbContext = Common.Infrastructure.Persistence.CommonDbContext;
 
 namespace Common.Infrastructure.Repositories
 {
     public class CommonRepositoryBase<T> : IRepository<T> where T : class
     {
-        protected readonly AutoLeasingServiceContext _commonDbContext;
-        public CommonRepositoryBase(AutoLeasingServiceContext context)
+        protected readonly CommonDbContext _commonDbContext;
+        public CommonRepositoryBase(CommonDbContext context)
         {
             _commonDbContext = context;
         }

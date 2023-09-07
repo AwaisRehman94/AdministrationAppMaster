@@ -9,7 +9,7 @@ using Common.Infrastructure.Repositories;
 using Common.Application.Common.Interfaces.Persistence.Logs;
 using Common.Application.Services.Logs;
 //using Common.Domain.DomainEntities.Entities.DomainEntities;
-using AutoLeasingServiceContext = Common.Infrastructure.Persistence.AutoLeasingServiceContext;
+using CommonDbContext = Common.Infrastructure.Persistence.CommonDbContext;
 
 namespace Common.Infrastructure
 {
@@ -19,10 +19,10 @@ namespace Common.Infrastructure
         {
             if (configuration.GetSection("DbProvider").Value == "MSSQLServer")
             {
-                services.AddDbContext<AutoLeasingServiceContext>(
+                services.AddDbContext<CommonDbContext>(
                     options =>
                     options.UseSqlServer(configuration.GetConnectionString("MSSQLServer_AutoLeasingService"),
-                    builder => builder.MigrationsAssembly(typeof(AutoLeasingServiceContext).Assembly.FullName)));
+                    builder => builder.MigrationsAssembly(typeof(CommonDbContext).Assembly.FullName)));
 
                 services.AddDbContext<TameenkLog>(options =>
                 options.UseSqlServer(configuration.GetConnectionString("MSSQLServer_AutoLeasingServiceLog"),

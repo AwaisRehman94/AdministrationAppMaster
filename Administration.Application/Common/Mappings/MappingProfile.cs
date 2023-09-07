@@ -1,22 +1,21 @@
-﻿using Identity.Application.Common.Models;
-using AutoMapper;
-using Identity.Domain.Entities;
+﻿
 using System.Reflection;
-using Common.Domain.Models;
-using Common.Domain.DomainEntities.Entities.DomainEntities;
 using Administration.Application.Features.Lookups.Queries.GetNajmStatus;
+using AutoMapper;
+using Common.Domain.DomainEntities.Entities.DomainEntities;
 
-namespace Identity.Application.Common.Mappings
+
+namespace Administration.Application.Mappings
 {
     public class MappingProfile : Profile
     {
         public MappingProfile()
         {
-            CreateMap<AutoleasingUser, GetAutoLeasingUserByEmailResponse>();
-            CreateMap<GetAuthorizedUserByIdResponse, UserModel>();
-            CreateMap<NajmStatus,GetNajmStatusResponse>();
-            ApplyMappingsFromAssembly(Assembly.GetExecutingAssembly());
+            CreateMap<NajmStatus, GetNajmStatusResponse>();
+            // CreateMap<GetNajmStatusResponse, GetNajmStatusResponse>();
 
+            ApplyMappingsFromAssembly(Assembly.GetExecutingAssembly());
+            
         }
 
         private void ApplyMappingsFromAssembly(Assembly assembly)
