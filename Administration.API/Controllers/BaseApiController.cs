@@ -10,6 +10,8 @@ namespace Administration.API.Controllers
     {
         private ISender _mediator = null!;
         protected ISender Mediator => _mediator ??= HttpContext.RequestServices.GetRequiredService<ISender>();
-
+        
     }
+
+
 }
