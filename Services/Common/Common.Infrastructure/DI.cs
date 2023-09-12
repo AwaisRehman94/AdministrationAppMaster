@@ -35,6 +35,7 @@ namespace Common.Infrastructure
             services.AddTransient(typeof(IRepository<>), typeof(CommonRepositoryBase<>));
             services.AddTransient(typeof(ILogsRepository<>), typeof(LogsRepositoryBase<>));
             services.AddTransient(typeof(ILogService<>), typeof(LogServiceBase<>));
+            services.AddSingleton<DapperContext>();
         }
     }
 }
