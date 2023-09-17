@@ -19,5 +19,5 @@ public partial class Benefit
 
     public virtual ICollection<OrderItemBenefit> OrderItemBenefit { get; set; } = new List<OrderItemBenefit>();
 
-    public virtual ICollection<ProductBenefit> ProductBenefit { get; set; } = new List<ProductBenefit>();
+    public virtual ICollection<Product_Benefit> ProductBenefit { get; set; } = new List<Product_Benefit>();
 }

@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Common.Domain.DomainEntities.Entities.DomainEntities;
 
-public partial class ProductBenefit
+public partial class Product_Benefit
 {
     public long Id { get; set; }
 

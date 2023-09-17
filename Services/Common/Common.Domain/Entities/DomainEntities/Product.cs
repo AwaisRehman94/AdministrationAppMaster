@@ -65,7 +65,7 @@ public partial class Product
 
     public virtual ICollection<PriceDetail> PriceDetail { get; set; } = new List<PriceDetail>();
 
-    public virtual ICollection<ProductBenefit> ProductBenefit { get; set; } = new List<ProductBenefit>();
+    public virtual ICollection<Product_Benefit> ProductBenefit { get; set; } = new List<Product_Benefit>();
 
     public virtual InsuranceCompany Provider { get; set; }
 

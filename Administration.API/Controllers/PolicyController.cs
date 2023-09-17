@@ -23,7 +23,7 @@ namespace Administration.API.Controllers
         }
 
         [HttpPost(Name = "GetNajmStatus")]
-        [Authorize]
+        //[Authorize]
         public async Task<ActionResult<Result<List<GetNajmStatusResponse>>>> GetNajmStatus([FromBody]GetNajmStatusRequest request)
         {
             return await Mediator.Send(request);

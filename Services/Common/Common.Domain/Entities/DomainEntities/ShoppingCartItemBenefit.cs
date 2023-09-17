@@ -13,5 +13,5 @@ public partial class ShoppingCartItemBenefit
 
     public long? ProductBenefitId { get; set; }
 
-    public virtual ProductBenefit ProductBenefit { get; set; }
+    public virtual Product_Benefit ProductBenefit { get; set; }
 }

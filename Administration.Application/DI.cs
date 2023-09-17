@@ -1,5 +1,6 @@
 ﻿using Administration.Application.Common.Interfaces;
 using Administration.Application.Services;
+using Common.Domain.DomainEntities.Entities.DomainEntities;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -22,6 +23,8 @@ namespace Administration.Application
                 cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly());
             });
             services.AddTransient<INajmStatusService, NajmStatusService>();
+            services.AddTransient<IInsuranceCompanyService, InsuranceCompanyService>();
+            services.AddTransient<IProductTypeService, ProductTypeService>();
             return services;
         }
     }

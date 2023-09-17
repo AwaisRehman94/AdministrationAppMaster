@@ -1,5 +1,6 @@
 ﻿
 using System.Reflection;
+using Administration.Application.Features.Lookups.Queries.GetAllInsuranceCompanies;
 using Administration.Application.Features.Lookups.Queries.GetNajmStatus;
 using AutoMapper;
 using Common.Domain.DomainEntities.Entities.DomainEntities;
@@ -12,6 +13,7 @@ namespace Administration.Application.Mappings
         public MappingProfile()
         {
             CreateMap<NajmStatus, GetNajmStatusResponse>();
+            CreateMap<InsuranceCompany, GetAllInsuranceCompaniesResponse>();
             // CreateMap<GetNajmStatusResponse, GetNajmStatusResponse>();
 
             ApplyMappingsFromAssembly(Assembly.GetExecutingAssembly());
